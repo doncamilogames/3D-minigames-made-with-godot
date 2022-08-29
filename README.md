@@ -86,9 +86,6 @@ DOWNLOAD :
 
 For Android :  https://www.mediafire.com/file/0otdvqt7l7s3spv/minigames.apk/file
 
-For Windows:  https://www.mediafire.com/file/w3tnnf1x58uycc3/minigames.exe/file
+For Windows:  https://www.mediafire.com/file/li2ydhxci97ug1g/minigames&pck.7z/file
 
 For Linux (never tested so far) :https://www.mediafire.com/file/ih6pb2rvp7tw1wf/minigames.x86_64/file
-
-You need to have this file in the same folder as the .exe for Windows :
-https://www.mediafire.com/file/0hrgkdhzjigfx48/minigames.pck/file
