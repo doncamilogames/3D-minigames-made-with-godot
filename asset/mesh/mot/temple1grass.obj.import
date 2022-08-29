@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/temple1grass.obj-ed8dc5751051654345e61eb4219517fe.mesh"
+
+[deps]
+
+files=[ "res://.import/temple1grass.obj-ed8dc5751051654345e61eb4219517fe.mesh" ]
+
+source_file="res://asset/mesh/mot/temple1grass.obj"
+dest_files=[ "res://.import/temple1grass.obj-ed8dc5751051654345e61eb4219517fe.mesh", "res://.import/temple1grass.obj-ed8dc5751051654345e61eb4219517fe.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

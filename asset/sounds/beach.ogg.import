@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beach.ogg-a6e3bd55365be28f4c0186bff0793ce0.oggstr"
+
+[deps]
+
+source_file="res://asset/sounds/beach.ogg"
+dest_files=[ "res://.import/beach.ogg-a6e3bd55365be28f4c0186bff0793ce0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

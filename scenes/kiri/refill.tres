@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://asset/textures/32text/rainbow.png" type="Texture" id=1]
+
+[resource]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 1, 1, 0.45098 )
+albedo_texture = ExtResource( 1 )
+uv1_offset = Vector3( 0.674485, 0.674485, 0.674485 )

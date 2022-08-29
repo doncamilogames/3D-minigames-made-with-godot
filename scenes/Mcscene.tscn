@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/macron.tscn" type="PackedScene" id=1]
+[ext_resource path="res://asset/mesh/macron/bg/_.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Mcscene.gd" type="Script" id=3]
+
+[sub_resource type="Environment" id=2]
+background_mode = 1
+background_color = Color( 1, 1, 1, 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=1]
+resource_name = "_"
+albedo_texture = ExtResource( 2 )
+metallic_specular = 0.0
+
+[sub_resource type="ArrayMesh" id=3]
+surfaces/0 = {
+"aabb": AABB( -4.725, 0, -2.92, 9.45, 3.66284, 2.92 ),
+"array_data": PoolByteArray( 123, 20, 22, 192, 228, 249, 236, 62, 72, 225, 58, 192, 0, 0, 127, 63, 18, 52, 1, 59, 102, 102, 30, 64, 248, 107, 106, 64, 72, 225, 58, 192, 0, 0, 127, 63, 28, 58, 173, 39, 102, 102, 30, 64, 228, 249, 236, 62, 72, 225, 58, 192, 0, 0, 127, 63, 28, 58, 1, 59, 123, 20, 22, 192, 248, 107, 106, 64, 72, 225, 58, 192, 0, 0, 127, 63, 18, 52, 173, 39, 123, 20, 22, 192, 228, 249, 236, 62, 72, 225, 58, 192, 69, 0, 126, 98, 18, 52, 1, 59, 51, 51, 151, 192, 105, 169, 68, 64, 0, 0, 0, 0, 69, 0, 126, 98, 187, 25, 243, 49, 123, 20, 22, 192, 248, 107, 106, 64, 72, 225, 58, 192, 69, 0, 126, 98, 18, 52, 173, 39, 51, 51, 151, 192, 0, 0, 0, 0, 0, 0, 0, 0, 69, 0, 126, 28, 187, 25, 252, 59, 123, 20, 22, 192, 228, 249, 236, 62, 72, 225, 58, 192, 0, 109, 127, 63, 18, 52, 1, 59, 51, 51, 151, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 109, 127, 63, 1, 60, 252, 59, 51, 51, 151, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 109, 127, 63, 187, 25, 252, 59, 102, 102, 30, 64, 228, 249, 236, 62, 72, 225, 58, 192, 0, 109, 127, 63, 28, 58, 1, 59, 102, 102, 30, 64, 248, 107, 106, 64, 72, 225, 58, 192, 185, 0, 55, 63, 28, 58, 173, 39, 51, 51, 151, 64, 0, 0, 0, 0, 0, 0, 0, 0, 185, 0, 55, 63, 1, 60, 252, 59, 102, 102, 30, 64, 228, 249, 236, 62, 72, 225, 58, 192, 185, 0, 55, 63, 28, 58, 1, 59, 51, 51, 151, 64, 105, 169, 68, 64, 0, 0, 0, 0, 185, 0, 55, 63, 1, 60, 243, 49 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0, 12, 0, 13, 0, 14, 0, 13, 0, 12, 0, 15, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 24,
+"material": SubResource( 1 ),
+"name": "_",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 16
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "cam"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../macron/Spatial/Camera2:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.035, 0.222, 0.097 ), Vector3( -0.481, 1.181, 0.097 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../macron/Spatial/Camera2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 14.032, 0, 0 ), Vector3( -11.589, -24.779, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "cam2"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../macron/Spatial:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 2.3, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, -35, 0 ), Vector3( 0, 40, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Mcscene" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, 0, -3.54324, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.999084 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody"]
+autoplay = "cam2"
+anims/cam = SubResource( 4 )
+anims/cam2 = SubResource( 5 )
+
+[node name="macron" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49821, -14.4796 )
+
+[node name="Spatial" type="Spatial" parent="macron"]
+transform = Transform( 0.986623, 0, -0.163021, 0, 1, 0, 0.163021, 0, 0.986623, 0, 10.027, 0 )
+
+[node name="Camera2" type="Camera" parent="macron/Spatial"]
+transform = Transform( 0.933622, 0.0478447, -0.35505, 0, 0.991042, 0.133548, 0.358259, -0.124683, 0.925259, -6.23866, 1.03448, 17.1245 )
+current = true
+
+[node name="pipo" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 524.0
+margin_right = 197.0
+margin_bottom = 566.0
+text = "PIPO"
+
+[node name="fuck" type="Button" parent="."]
+margin_left = 795.0
+margin_top = 511.0
+margin_right = 962.0
+margin_bottom = 553.0
+text = "Fuck"
+
+[connection signal="pressed" from="pipo" to="." method="_on_pipo_pressed"]
+[connection signal="pressed" from="fuck" to="." method="_on_fuck_pressed"]

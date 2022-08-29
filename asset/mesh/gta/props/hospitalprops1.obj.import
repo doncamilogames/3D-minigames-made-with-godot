@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hospitalprops1.obj-8b634d4d25aac9fb14d4e8c484c9995a.mesh"
+
+[deps]
+
+files=[ "res://.import/hospitalprops1.obj-8b634d4d25aac9fb14d4e8c484c9995a.mesh" ]
+
+source_file="res://asset/mesh/gta/props/hospitalprops1.obj"
+dest_files=[ "res://.import/hospitalprops1.obj-8b634d4d25aac9fb14d4e8c484c9995a.mesh", "res://.import/hospitalprops1.obj-8b634d4d25aac9fb14d4e8c484c9995a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

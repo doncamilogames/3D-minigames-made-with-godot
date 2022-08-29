@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/factory1.obj-0abb626a37c4f1b9df11d728f9b07e72.mesh"
+
+[deps]
+
+files=[ "res://.import/factory1.obj-0abb626a37c4f1b9df11d728f9b07e72.mesh" ]
+
+source_file="res://asset/mesh/tilemap/factory1.obj"
+dest_files=[ "res://.import/factory1.obj-0abb626a37c4f1b9df11d728f9b07e72.mesh", "res://.import/factory1.obj-0abb626a37c4f1b9df11d728f9b07e72.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

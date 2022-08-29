@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/arrowwood.obj-93b91dec2b832461ba07bb4a0ba075fd.mesh"
+
+[deps]
+
+files=[ "res://.import/arrowwood.obj-93b91dec2b832461ba07bb4a0ba075fd.mesh" ]
+
+source_file="res://asset/mesh/mot/arrowwood.obj"
+dest_files=[ "res://.import/arrowwood.obj-93b91dec2b832461ba07bb4a0ba075fd.mesh", "res://.import/arrowwood.obj-93b91dec2b832461ba07bb4a0ba075fd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asset/materials/mot/temple1dec.tres" type="Material" id=1]
+
+[sub_resource type="ArrayMesh" id=2]
+surfaces/0 = {
+"aabb": AABB( -0.186694, 0, -0.033023, 0.379784, 0.922981, 0.066046 ),
+"array_data": PoolByteArray( 0, 0, 0, 0, 212, 71, 108, 63, 32, 67, 7, 189, 129, 93, 0, 1, 0, 0, 130, 63, 0, 128, 124, 63, 182, 44, 63, 190, 212, 71, 108, 63, 32, 67, 7, 61, 129, 93, 0, 1, 0, 0, 130, 63, 0, 32, 80, 62, 182, 44, 63, 190, 0, 0, 0, 0, 32, 67, 7, 61, 129, 93, 0, 1, 0, 96, 156, 64, 0, 32, 80, 62, 0, 0, 0, 0, 0, 0, 0, 0, 32, 67, 7, 189, 129, 93, 0, 1, 0, 96, 156, 64, 0, 128, 124, 63, 99, 185, 69, 62, 0, 0, 0, 0, 32, 67, 7, 61, 127, 94, 0, 1, 0, 96, 156, 64, 0, 224, 229, 63, 0, 0, 0, 0, 212, 71, 108, 63, 32, 67, 7, 189, 127, 94, 0, 1, 0, 0, 130, 63, 0, 128, 124, 63, 0, 0, 0, 0, 0, 0, 0, 0, 32, 67, 7, 189, 127, 94, 0, 1, 0, 96, 156, 64, 0, 128, 124, 63, 99, 185, 69, 62, 212, 71, 108, 63, 32, 67, 7, 61, 127, 94, 0, 1, 0, 0, 130, 63, 0, 224, 229, 63 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 3, 0, 0, 0, 2, 0, 4, 0, 5, 0, 6, 0, 4, 0, 7, 0, 5, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 12,
+"material": ExtResource( 1 ),
+"name": "templedeco",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 8
+}
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.186694, 0, 0.0330165, -3.62545e-05, 0, -0.033023, 0.19309, 0, 0.0330165, -0.186694, 0.922881, 0.0330165, -3.62545e-05, 0.922881, -0.033023, 0.19309, 0.922881, 0.0330165 )
+
+[node name="temple1dec" type="StaticBody"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+shape = SubResource( 1 )

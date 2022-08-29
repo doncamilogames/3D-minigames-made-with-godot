@@ -1,0 +1,160 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/kinematic/tile/plane22.tres" type="Material" id=1]
+[ext_resource path="res://scenes/pilotwings/rocket.gd" type="Script" id=2]
+[ext_resource path="res://asset/materials/smoke.tres" type="Material" id=3]
+[ext_resource path="res://asset/textures/32text/32fire.png" type="Texture" id=4]
+[ext_resource path="res://asset/sounds/plane1.wav" type="AudioStream" id=5]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.0
+
+[sub_resource type="CapsuleMesh" id=1]
+material = ExtResource( 1 )
+radius = 0.02
+mid_height = 0.1
+radial_segments = 4
+rings = 1
+
+[sub_resource type="SphereShape" id=33]
+radius = 0.0838532
+
+[sub_resource type="SphereMesh" id=32]
+material = ExtResource( 3 )
+radius = 0.7
+height = 0.5
+radial_segments = 4
+rings = 1
+
+[sub_resource type="SpatialMaterial" id=28]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0 )
+albedo_texture = ExtResource( 4 )
+metallic_specular = 0.0
+
+[sub_resource type="SphereMesh" id=29]
+material = SubResource( 28 )
+radius = 0.1
+height = 0.2
+radial_segments = 6
+rings = 3
+
+[sub_resource type="Animation" id=30]
+resource_name = "explode"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("balloffire:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.1, 0.1, 0.1 ), Vector3( 6, 6, 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("balloffire:mesh:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("balloffire:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_explode"
+} ]
+}
+
+[node name="rocket" type="RigidBody"]
+collision_layer = 4096
+collision_mask = 4096
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+continuous_cd = true
+contacts_reported = 2
+contact_monitor = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource( 2 )
+
+[node name="mesh" type="MeshInstance" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0 )
+shape = SubResource( 33 )
+
+[node name="Particles" type="CPUParticles" parent="."]
+transform = Transform( -0.0113533, 0, -0.0993534, 0, 0.1, 0, 0.0993534, 0, -0.0113533, 0.000824653, 0, 0.119453 )
+cast_shadow = 0
+amount = 3
+lifetime = 0.5
+fract_delta = false
+mesh = SubResource( 32 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.01
+radial_accel = 50.45
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00166141, 0, 0.119453 )
+light_color = Color( 1, 0.796078, 0.192157, 1 )
+light_energy = 10.0
+light_indirect_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 0
+omni_range = 2.0
+omni_attenuation = 1.97461
+omni_shadow_mode = 0
+
+[node name="balloffire" type="MeshInstance" parent="."]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+mesh = SubResource( 29 )
+
+[node name="Animexplode" type="AnimationPlayer" parent="."]
+anims/explode = SubResource( 30 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0664931 )
+stream = ExtResource( 5 )
+max_db = 5.5
+pitch_scale = 0.37
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_rocket_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

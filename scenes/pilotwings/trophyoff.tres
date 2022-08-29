@@ -1,0 +1,6 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+resource_local_to_scene = true
+flags = 4
+load_path = "res://.import/trophy1.png-488ae5d8d7ff172562237d5f8e8781a4.stex"

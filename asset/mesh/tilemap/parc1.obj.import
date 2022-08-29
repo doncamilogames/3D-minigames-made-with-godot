@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/parc1.obj-8cdbf81d2c27774a43a16ded18d8e4be.mesh"
+
+[deps]
+
+files=[ "res://.import/parc1.obj-8cdbf81d2c27774a43a16ded18d8e4be.mesh" ]
+
+source_file="res://asset/mesh/tilemap/parc1.obj"
+dest_files=[ "res://.import/parc1.obj-8cdbf81d2c27774a43a16ded18d8e4be.mesh", "res://.import/parc1.obj-8cdbf81d2c27774a43a16ded18d8e4be.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

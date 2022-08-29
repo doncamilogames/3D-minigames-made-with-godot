@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/spring1.obj-483a6cfa86eeb71336069c9bf359000f.mesh"
+
+[deps]
+
+files=[ "res://.import/spring1.obj-483a6cfa86eeb71336069c9bf359000f.mesh" ]
+
+source_file="res://asset/mesh/kiri/spring1.obj"
+dest_files=[ "res://.import/spring1.obj-483a6cfa86eeb71336069c9bf359000f.mesh", "res://.import/spring1.obj-483a6cfa86eeb71336069c9bf359000f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

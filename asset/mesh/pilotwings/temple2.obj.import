@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/temple2.obj-f33eb9f151a7524e7a62f0b4aade7b1f.mesh"
+
+[deps]
+
+files=[ "res://.import/temple2.obj-f33eb9f151a7524e7a62f0b4aade7b1f.mesh" ]
+
+source_file="res://asset/mesh/pilotwings/temple2.obj"
+dest_files=[ "res://.import/temple2.obj-f33eb9f151a7524e7a62f0b4aade7b1f.mesh", "res://.import/temple2.obj-f33eb9f151a7524e7a62f0b4aade7b1f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

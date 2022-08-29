@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/kurulast.ogg-bd5e0e61039335155afd0f4f96f467c4.oggstr"
+
+[deps]
+
+source_file="res://asset/sounds/kurulast.ogg"
+dest_files=[ "res://.import/kurulast.ogg-bd5e0e61039335155afd0f4f96f467c4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

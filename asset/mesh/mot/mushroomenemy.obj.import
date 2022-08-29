@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/mushroomenemy.obj-6a3e44c1b6834e3a03cca575731ec990.mesh"
+
+[deps]
+
+files=[ "res://.import/mushroomenemy.obj-6a3e44c1b6834e3a03cca575731ec990.mesh" ]
+
+source_file="res://asset/mesh/mot/mushroomenemy.obj"
+dest_files=[ "res://.import/mushroomenemy.obj-6a3e44c1b6834e3a03cca575731ec990.mesh", "res://.import/mushroomenemy.obj-6a3e44c1b6834e3a03cca575731ec990.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

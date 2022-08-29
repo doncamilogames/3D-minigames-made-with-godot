@@ -1,0 +1,180 @@
+[gd_resource type="Animation" load_steps=2 format=2]
+
+[ext_resource path="res://asset/sounds/withbass.ogg" type="AudioStream" id=1]
+
+[resource]
+resource_name = "Green1"
+length = 120.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Green1/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6.5, 10, 20.3, 22.8, 25.3, 28, 35.2, 57.7, 59.8, 61.1, 72, 74, 77.6, 83.3, 92.8, 97.1, 100.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 800, 251, 1326.37 ), Vector3( 800, 251, 1326.37 ), Vector3( 800, 386, 1011.64 ), Vector3( 800, 389.921, 1004.85 ), Vector3( 801.068, 391.841, 1002.09 ), Vector3( 799.32, 392.889, 1000.97 ), Vector3( 798.84, 390.906, 1000.44 ), Vector3( 798.84, 390.906, 1000.44 ), Vector3( 798.805, 391.874, 1001.01 ), Vector3( 798.805, 391.874, 1001.01 ), Vector3( 798.873, 390.436, 1002.99 ), Vector3( 799.968, 390.079, 1004.91 ), Vector3( 799.986, 396.154, 1007.77 ), Vector3( 799.986, 396.154, 1007.77 ), Vector3( 1061.71, 96.2558, 584.34 ), Vector3( 933.328, 39.7871, 250.82 ), Vector3( 870.651, 4.64373, 250.82 ), Vector3( 866.123, 4.64373, 211.727 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Green1/Camera:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5.9, 10, 20.3, 22.8, 25.3, 28, 35, 58.3, 59.8, 61.1, 72, 74, 77.6, 83, 88.3, 92.6, 97.1, 100.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 30, 0, 0 ), Vector3( 30, 0, 0 ), Vector3( 30, 0, 0 ), Vector3( 30, 0, 0 ), Vector3( -29.3612, 84.7949, 41.6367 ), Vector3( -63.9436, 146.429, 23.169 ), Vector3( -30.207, 180, -1.79 ), Vector3( -30.207, 180, -1.79 ), Vector3( -62.256, 180, -3.324 ), Vector3( -62.256, 180, -3.324 ), Vector3( 25.0945, -3.66713, -1.70797 ), Vector3( 25.0945, -3.66713, -1.70797 ), Vector3( -25.151, 30, 0 ), Vector3( -25.151, 30, 0 ), Vector3( -25.151, 90, 0 ), Vector3( -25.151, 120, 0 ), Vector3( -25.151, 90, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Green1/dclogo:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 800, 254, 1330 ), Vector3( 800, 252, 1297.42 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Green1/dclogo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.8, 1.9, 3.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.203922, 1, 0.494118, 0 ), Color( 0.203922, 1, 0.494118, 1 ), Color( 0.203922, 1, 0.494118, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Green1/music:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( -0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Green1/music:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6.6, 102.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("Green1")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 13.9, 20, 28.2, 38.5, 46.8, 53.8, 61, 73.2, 82.2, 105.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ "V1-1" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-2" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-3" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-4" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-5" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-6" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-7" ],
+"method": "_opendtextbox"
+}, {
+"args": [ "V1-8" ],
+"method": "_opendtextbox"
+}, {
+"args": [  ],
+"method": "_closetextbox"
+}, {
+"args": [ "Green1bis" ],
+"method": "_startcutscene"
+} ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../text/Label:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Green1/bigplane:translation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 4.2, 9.6, 20.4, 26.4, 70.3, 73.7, 92.3, 94.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 799.715, 240.86, 1386.35 ), Vector3( 799.715, 192.214, 1386.35 ), Vector3( 799.46, 386.105, 1001.96 ), Vector3( 800.209, 388.184, 1003.66 ), Vector3( 800.149, 388.629, 1003.11 ), Vector3( 800.149, 388.629, 1003.11 ), Vector3( 800.173, 388, 988.671 ), Vector3( 882.715, 0.736517, 233.909 ), Vector3( 875.109, 0.736517, 209.677 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Green1/bigplane:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( -0.1, 4.2, 9.3, 20.1, 26.2, 57.9, 58.1, 58.3, 58.5, 58.7, 58.9, 59.1, 59.3, 60, 70.1, 74, 92.4, 94.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.376, 91.682, 10 ), Vector3( 0.376, 91.682, 15 ), Vector3( 0, 91.682, 15 ), Vector3( -4.134, 91.686, 15 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( 5, 90.314, 24.82 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( 5, 90.314, 24.82 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( 5, 90.314, 24.82 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( 5, 90.314, 24.82 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( -3.60587, 90.3141, 24.8201 ), Vector3( 0.38, 91.682, -20 ), Vector3( 0, 91.724, 0 ), Vector3( 0, 180, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Green1/Camera:current")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Green1/bigplane/interior:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.5, 75.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}

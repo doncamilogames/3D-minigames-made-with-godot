@@ -1,0 +1,897 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://scenes/kinematic/macronMeshgun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/kinematic/Kinemacron.gd" type="Script" id=2]
+[ext_resource path="res://asset/textures/hudmenu/bgtuch.png" type="Texture" id=3]
+[ext_resource path="res://scenes/stick/virtual_joystick.tscn" type="PackedScene" id=4]
+[ext_resource path="res://asset/sounds/poc1.wav" type="AudioStream" id=5]
+[ext_resource path="res://asset/fonts/new_theme.tres" type="Theme" id=6]
+[ext_resource path="res://asset/textures/hudmenu/button1.png" type="Texture" id=7]
+[ext_resource path="res://asset/textures/gta/phone1.png" type="Texture" id=8]
+[ext_resource path="res://asset/textures/32text/32window1.png" type="Texture" id=9]
+[ext_resource path="res://asset/textures/32text/32gunsign.png" type="Texture" id=10]
+[ext_resource path="res://asset/textures/32text/32foodsign.png" type="Texture" id=11]
+[ext_resource path="res://asset/textures/32text/32barsign.png" type="Texture" id=12]
+[ext_resource path="res://asset/textures/gta/map.png" type="Texture" id=13]
+[ext_resource path="res://asset/textures/32text/1.png" type="Texture" id=14]
+[ext_resource path="res://asset/textures/32text/32book2.png" type="Texture" id=15]
+[ext_resource path="res://asset/textures/32text/cadre2.png" type="Texture" id=16]
+[ext_resource path="res://asset/textures/32text/32polsign.png" type="Texture" id=17]
+[ext_resource path="res://asset/textures/32text/32hopsign.png" type="Texture" id=18]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.356396
+height = 2.45867
+
+[sub_resource type="Animation" id=4]
+resource_name = "findtrot"
+length = 1.3
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.28697 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 46, 0 ), Vector3( 0, -45, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "phone"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 280, 700 ), Vector2( 280, 440 ) ]
+}
+
+[node name="Kinemacron" type="KinematicBody"]
+collision_layer = 3
+collision_mask = 3
+axis_lock_motion_y = true
+move_lock_y = true
+collision/safe_margin = 0.01
+script = ExtResource( 2 )
+
+[node name="weaponsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+pitch_scale = 2.0
+
+[node name="guncast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9061, 0.0402837 )
+enabled = true
+cast_to = Vector3( 0, 0, 30 )
+collision_mask = 5
+
+[node name="macronwithgun" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Areapunch" parent="macronwithgun/Armature/Bone/Bone001/Bone003/Bone004/Bone005/handr" index="0"]
+monitoring = true
+monitorable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.48766, 0 )
+shape = SubResource( 1 )
+
+[node name="Collcar" type="CollisionShape" parent="."]
+transform = Transform( 0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 1.48766, 0 )
+
+[node name="GroundRay" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.318, 0 )
+enabled = true
+cast_to = Vector3( 0, -0.5, 0 )
+
+[node name="J2" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 899, 311 )
+rotation = 0.0872665
+scale = Vector2( 3, 3 )
+normal = ExtResource( 3 )
+passby_press = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="J2"]
+visible = false
+margin_right = 32.0
+margin_bottom = 31.0
+text = "J"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="J2"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+texture = ExtResource( 7 )
+
+[node name="C" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 930, 12 )
+rotation = 0.0872665
+scale = Vector2( 1.93361, 1.44931 )
+normal = ExtResource( 3 )
+passby_press = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="C"]
+margin_right = 32.0
+margin_bottom = 31.0
+text = "C"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="C"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+texture = ExtResource( 7 )
+
+[node name="A" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 34.0001, 314 )
+rotation = -0.0872665
+scale = Vector2( 3, 3 )
+normal = ExtResource( 3 )
+passby_press = true
+
+[node name="icon" type="Sprite" parent="A"]
+position = Vector2( 3.26251, 0.954643 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="A"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+texture = ExtResource( 7 )
+
+[node name="Virtual joystick" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0.184314 )
+margin_left = -2.0
+margin_top = -195.0
+margin_right = 198.0
+margin_bottom = 5.0
+deadzone_size = 5.0
+use_input_actions = false
+
+[node name="Virtual joystick2" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0.184314 )
+margin_left = 832.0
+margin_top = -192.0
+margin_right = 1032.0
+margin_bottom = 8.0
+deadzone_size = 30.0
+use_input_actions = false
+action_left = "ui2_left"
+action_right = "ui2_right"
+action_up = "ui2_up"
+action_down = "ui2_down"
+
+[node name="b" type="Button" parent="."]
+margin_left = 62.0
+margin_top = -96.0
+margin_right = 136.0
+margin_bottom = -46.0
+focus_mode = 0
+theme = ExtResource( 6 )
+text = "Quit"
+
+[node name="npc" type="Spatial" parent="."]
+transform = Transform( 0.998054, 0, 0.062351, 0, 1, 0, -0.062351, 0, 0.998054, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="npc"]
+autoplay = "findtrot"
+playback_speed = 2.0
+anims/findtrot = SubResource( 4 )
+
+[node name="RayCast" type="RayCast" parent="npc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53282, 35 )
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+collision_mask = 256
+
+[node name="RayCast2" type="RayCast" parent="npc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53282, 35 )
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+collision_mask = 512
+
+[node name="crimedelay" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="delaydoor" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="phone" type="Sprite" parent="."]
+position = Vector2( 280, 700 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 8 )
+
+[node name="phone" type="Button" parent="phone"]
+margin_left = -17.0
+margin_top = -31.0
+margin_right = 148.0
+margin_bottom = 20.0
+rect_scale = Vector2( 0.2, 0.2 )
+focus_mode = 0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Phone"
+flat = true
+
+[node name="radio" type="Button" parent="phone"]
+margin_left = -15.0
+margin_top = -20.0
+margin_right = 191.0
+margin_bottom = 17.0
+rect_scale = Vector2( 0.132, 0.2 )
+focus_mode = 0
+theme = ExtResource( 6 )
+toggle_mode = true
+text = "Radio Off"
+flat = true
+
+[node name="newsong" type="Button" parent="phone/radio"]
+margin_left = 30.7269
+margin_top = 68.9998
+margin_right = 200.727
+margin_bottom = 106.0
+rect_scale = Vector2( 0.9, 0.9 )
+focus_mode = 0
+shortcut_in_tooltip = false
+text = "Next Song"
+flat = true
+
+[node name="current" type="Label" parent="phone/radio"]
+margin_left = 17.0
+margin_top = 37.0
+margin_right = 248.0
+margin_bottom = 61.0
+rect_scale = Vector2( 0.713, 0.8 )
+custom_colors/font_color = Color( 0.427451, 0.427451, 0.427451, 1 )
+align = 1
+
+[node name="zones" type="Button" parent="phone"]
+margin_left = -13.0
+margin_top = 4.20007
+margin_right = 137.0
+margin_bottom = 41.2001
+rect_scale = Vector2( 0.165, 0.178 )
+focus_mode = 0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.00392157, 0.627451, 0, 1 )
+toggle_mode = true
+text = "Map Size"
+flat = true
+
+[node name="mapinfo" type="Button" parent="phone"]
+margin_left = -13.0
+margin_top = 11.4001
+margin_right = 137.0
+margin_bottom = 48.4001
+rect_scale = Vector2( 0.165, 0.178 )
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.00392157, 0.627451, 0, 1 )
+toggle_mode = true
+text = "Map Info"
+flat = true
+
+[node name="zones2" type="Button" parent="phone"]
+margin_left = -13.0
+margin_top = 20.0
+margin_right = 80.0
+margin_bottom = 57.0
+rect_scale = Vector2( 0.25, 0.2 )
+focus_mode = 0
+theme = ExtResource( 6 )
+custom_colors/font_color = Color( 0.65098, 0.533333, 0, 1 )
+toggle_mode = true
+text = "Save"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="phone"]
+anims/phone = SubResource( 5 )
+
+[node name="minimap" type="ViewportContainer" parent="."]
+self_modulate = Color( 1, 1, 1, 0.658824 )
+margin_left = 630.0
+margin_top = 445.0
+margin_right = 830.0
+margin_bottom = 595.0
+rect_min_size = Vector2( 200, 150 )
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="minimap"]
+size = Vector2( 200, 150 )
+handle_input_locally = false
+disable_3d = true
+usage = 0
+render_target_update_mode = 3
+
+[node name="map" type="Sprite" parent="minimap/Viewport"]
+scale = Vector2( 0.4, 0.279 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="arcadezones" type="Node2D" parent="minimap/Viewport/map"]
+modulate = Color( 1, 1, 1, 0.705882 )
+
+[node name="G1" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0.054902, 1, 0, 0.490196 )
+position = Vector2( 62, 314 )
+scale = Vector2( 2.875, 2.53 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="G2" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0.054902, 1, 0, 0.490196 )
+position = Vector2( 157, 315 )
+scale = Vector2( 2.638, 2.318 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="G3" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0.054902, 1, 0, 0.490196 )
+position = Vector2( 161, 396 )
+scale = Vector2( 2.538, 3.312 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="G4" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0.054902, 1, 0, 0.490196 )
+position = Vector2( 62, 398 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Y1" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0.960784, 0, 0.490196 )
+position = Vector2( 62, 108 )
+scale = Vector2( 3.196, 3.778 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Y2" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0.960784, 0, 0.490196 )
+position = Vector2( 168, 108 )
+scale = Vector2( 2.332, 3.778 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Y3" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0.960784, 0, 0.490196 )
+position = Vector2( 167, 234 )
+scale = Vector2( 2.332, 2.245 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Y4" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0.960784, 0, 0.490196 )
+position = Vector2( 58, 234 )
+scale = Vector2( 3.311, 2.245 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="B1" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0, 0.392157, 1, 0.490196 )
+position = Vector2( 251, 107 )
+scale = Vector2( 1.931, 3.601 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="B2" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0, 0.392157, 1, 0.490196 )
+position = Vector2( 316, 107 )
+scale = Vector2( 3.182, 3.601 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="B3" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0, 0.392157, 1, 0.490196 )
+position = Vector2( 327, 225 )
+scale = Vector2( 4.25, 2.495 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="B4" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 0, 0.392157, 1, 0.490196 )
+position = Vector2( 250, 225 )
+scale = Vector2( 2.317, 2.495 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="R1" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0, 0, 0.490196 )
+position = Vector2( 250, 314 )
+scale = Vector2( 2.837, 2.654 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="R2" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0, 0, 0.490196 )
+position = Vector2( 342, 314 )
+scale = Vector2( 3.806, 2.419 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="R3" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0, 0, 0.490196 )
+position = Vector2( 342, 396 )
+scale = Vector2( 2.113, 3.453 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="R4" type="Sprite" parent="minimap/Viewport/map/arcadezones"]
+self_modulate = Color( 1, 0, 0, 0.490196 )
+position = Vector2( 251, 400 )
+scale = Vector2( 2.788, 3.453 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="top" type="Node2D" parent="minimap/Viewport/map/arcadezones"]
+
+[node name="G1top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 62, 314 )
+scale = Vector2( 2.875, 2.53 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="G2top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 157, 315 )
+scale = Vector2( 2.638, 2.318 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="G3top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 161, 396 )
+scale = Vector2( 2.538, 3.312 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="G4top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 62, 398 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="Y1top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 62, 108 )
+scale = Vector2( 3.196, 3.778 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="Y2top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 168, 108 )
+scale = Vector2( 2.332, 3.778 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="Y3top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 167, 234 )
+scale = Vector2( 2.332, 2.245 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="Y4top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 58, 234 )
+scale = Vector2( 3.311, 2.245 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="B1top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 251, 107 )
+scale = Vector2( 1.931, 3.601 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="B2top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 316, 107 )
+scale = Vector2( 3.182, 3.601 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="B3top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 327, 225 )
+scale = Vector2( 4.25, 2.495 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="B4top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 250, 225 )
+scale = Vector2( 2.317, 2.495 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="R1top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 250, 314 )
+scale = Vector2( 2.837, 2.654 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="R2top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 342, 314 )
+scale = Vector2( 3.806, 2.419 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="R3top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 342, 396 )
+scale = Vector2( 2.113, 3.453 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="R4top" type="Sprite" parent="minimap/Viewport/map/arcadezones/top"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 251, 400 )
+scale = Vector2( 2.788, 3.453 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="icons" type="Node2D" parent="minimap/Viewport/map"]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="police1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 456, 870 )
+texture = ExtResource( 17 )
+
+[node name="police2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 305, 579 )
+texture = ExtResource( 17 )
+
+[node name="police3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 793, 657 )
+texture = ExtResource( 17 )
+
+[node name="hopital1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 389, 801 )
+texture = ExtResource( 18 )
+
+[node name="hopital2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 418, 373 )
+texture = ExtResource( 18 )
+
+[node name="hopital3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 681, 581 )
+texture = ExtResource( 18 )
+
+[node name="ggun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 201, 668 )
+texture = ExtResource( 10 )
+
+[node name="ygun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 455, 446 )
+texture = ExtResource( 10 )
+
+[node name="bgun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 610, 544 )
+texture = ExtResource( 10 )
+
+[node name="rgun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 512, 665 )
+texture = ExtResource( 10 )
+
+[node name="gfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 231, 668 )
+texture = ExtResource( 11 )
+
+[node name="gfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 451, 764 )
+texture = ExtResource( 11 )
+
+[node name="gfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 471, 934 )
+texture = ExtResource( 11 )
+
+[node name="yfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 470, 585 )
+texture = ExtResource( 11 )
+
+[node name="yfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 190, 541 )
+texture = ExtResource( 11 )
+
+[node name="yfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 359, 472 )
+texture = ExtResource( 11 )
+
+[node name="bfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 570, 403 )
+texture = ExtResource( 11 )
+
+[node name="bfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 750, 388 )
+texture = ExtResource( 11 )
+
+[node name="bfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 513, 597 )
+texture = ExtResource( 11 )
+
+[node name="rfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 724, 669 )
+texture = ExtResource( 11 )
+
+[node name="rfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 622, 765 )
+texture = ExtResource( 11 )
+
+[node name="rfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 570, 891 )
+texture = ExtResource( 11 )
+
+[node name="gbar1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 570, 891 )
+texture = ExtResource( 12 )
+
+[node name="obj" type="Node2D" parent="minimap/Viewport/map"]
+self_modulate = Color( 1, 1, 1, 0.207843 )
+
+[node name="labelzones" type="Node2D" parent="minimap/Viewport/map"]
+visible = false
+
+[node name="G1" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 90.0
+margin_top = 320.0
+margin_right = 98.0
+margin_bottom = 334.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="G2" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 180.0
+margin_top = 320.0
+margin_right = 188.0
+margin_bottom = 334.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="G3" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 180.0
+margin_top = 420.0
+margin_right = 188.0
+margin_bottom = 434.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="G4" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 90.0
+margin_top = 420.0
+margin_right = 98.0
+margin_bottom = 434.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="Y1" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 90.0
+margin_top = 140.0
+margin_right = 98.0
+margin_bottom = 154.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="Y2" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 180.0
+margin_top = 140.0
+margin_right = 188.0
+margin_bottom = 154.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="Y3" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 180.0
+margin_top = 240.0
+margin_right = 188.0
+margin_bottom = 254.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="Y4" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 90.0
+margin_top = 240.0
+margin_right = 98.0
+margin_bottom = 254.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="B1" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 260.0
+margin_top = 140.0
+margin_right = 268.0
+margin_bottom = 154.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="B2" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 360.0
+margin_top = 140.0
+margin_right = 368.0
+margin_bottom = 154.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="B3" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 360.0
+margin_top = 240.0
+margin_right = 368.0
+margin_bottom = 254.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="B4" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 260.0
+margin_top = 240.0
+margin_right = 268.0
+margin_bottom = 254.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="R1" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 260.0
+margin_top = 320.0
+margin_right = 268.0
+margin_bottom = 334.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="R2" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 360.0
+margin_top = 320.0
+margin_right = 368.0
+margin_bottom = 334.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="R3" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 360.0
+margin_top = 420.0
+margin_right = 368.0
+margin_bottom = 434.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="R4" type="Label" parent="minimap/Viewport/map/labelzones"]
+margin_left = 260.0
+margin_top = 420.0
+margin_right = 268.0
+margin_bottom = 434.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.894118, 0.768627, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_as_outline = 1
+text = "6"
+
+[node name="pointer" type="Sprite" parent="minimap"]
+position = Vector2( 98, 87 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[node name="bg" type="Sprite" parent="minimap"]
+self_modulate = Color( 0.196078, 0.196078, 0.196078, 0.682353 )
+show_behind_parent = true
+position = Vector2( -3.99997, -6 )
+scale = Vector2( 6.5, 5.0625 )
+texture = ExtResource( 9 )
+centered = false
+
+[connection signal="body_entered" from="macronwithgun/Armature/Bone/Bone001/Bone003/Bone004/Bone005/handr/Areapunch" to="." method="_on_Areapunch_body_entered"]
+[connection signal="body_entered" from="macronwithgun/Armature/Bone/Bone001/Bone003/Bone004/Bone005/bat/Areabat" to="." method="_on_Areabat_body_entered"]
+[connection signal="pressed" from="J2" to="." method="_on_J2_pressed"]
+[connection signal="pressed" from="C" to="." method="_on_C_pressed"]
+[connection signal="pressed" from="A" to="." method="_on_A_pressed"]
+[connection signal="button_down" from="b" to="." method="_on_b_button_down"]
+[connection signal="timeout" from="crimedelay" to="." method="_on_crimedelay_timeout"]
+[connection signal="timeout" from="delaydoor" to="." method="_on_delaydoor_timeout"]
+[connection signal="pressed" from="phone/phone" to="." method="_on_phone_pressed"]
+[connection signal="pressed" from="phone/radio" to="." method="_on_radio_pressed"]
+[connection signal="pressed" from="phone/radio/newsong" to="." method="_on_newsong_pressed"]
+[connection signal="pressed" from="phone/zones" to="." method="_on_zones_pressed"]
+[connection signal="pressed" from="phone/mapinfo" to="." method="_on_mapinfo_pressed"]
+[connection signal="pressed" from="phone/zones2" to="." method="_on_zones2_pressed"]
+
+[editable path="macronwithgun"]

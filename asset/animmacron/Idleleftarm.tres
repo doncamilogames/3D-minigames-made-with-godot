@@ -1,0 +1,26 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Idleleftarm"
+length = 0.05
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature/Bone/Bone001/Bone006/Bone007/Bone008")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 1.15884e-07, 1.89543, 1.76489e-08, 2.12406e-21, 8.52651e-14, 5.45442e-15, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature/Bone/Bone001/Bone006/Bone007")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 1.22653e-08, 2.49117, 4.83329e-08, -3.50161e-08, -2.49568e-08, -0.0873233, 0.99618, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("Armature/Bone/Bone001/Bone006")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, 2.13742, 2.8216, -0.314664, -5.02532e-08, -2.84288e-08, -0.99618, 0.0873229, 1, 1, 1 )

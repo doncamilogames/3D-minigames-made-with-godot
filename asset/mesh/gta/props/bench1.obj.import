@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bench1.obj-aea09152a61dc80f8b1369fe2455308c.mesh"
+
+[deps]
+
+files=[ "res://.import/bench1.obj-aea09152a61dc80f8b1369fe2455308c.mesh" ]
+
+source_file="res://asset/mesh/gta/props/bench1.obj"
+dest_files=[ "res://.import/bench1.obj-aea09152a61dc80f8b1369fe2455308c.mesh", "res://.import/bench1.obj-aea09152a61dc80f8b1369fe2455308c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

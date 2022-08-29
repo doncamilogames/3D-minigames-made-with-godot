@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/monsteroftime/invwall.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=65]
+extents = Vector3( 22.7536, 10.3281, 1 )
+
+[node name="invwall" type="StaticBody"]
+transform = Transform( 0.602581, 0, 0.798057, 0, 1, 0, -0.798057, 0, 0.602581, -40.728, 0, -122.562 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 65 )

@@ -1,0 +1,28 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _9
+Ka 0.000000 0.000000 0.000000
+Kd 0.254902 0.294118 0.192157
+Ks 0.330000 0.330000 0.330000
+map_Kd macron/_9.png
+
+newmtl _6
+Ka 0.000000 0.000000 0.000000
+Kd 0.439216 0.439216 0.439216
+Ks 0.330000 0.330000 0.330000
+map_Kd macron/_6.png
+
+newmtl _5
+Ka 0.000000 0.000000 0.000000
+Kd 0.513725 0.415686 0.325490
+Ks 0.330000 0.330000 0.330000
+map_Kd macron/_5.png
+
+newmtl _8
+Ka 0.000000 0.000000 0.000000
+Kd 0.427451 0.345098 0.270588
+Ks 0.330000 0.330000 0.330000
+map_Kd macron/_8.png
+

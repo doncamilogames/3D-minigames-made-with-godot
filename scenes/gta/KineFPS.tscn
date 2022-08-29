@@ -1,0 +1,1989 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://asset/fonts/new_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scenes/gta/meshfps.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/stick/virtual_joystick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://asset/sounds/poc1.wav" type="AudioStream" id=4]
+[ext_resource path="res://scenes/gta/KineFPS.gd" type="Script" id=5]
+[ext_resource path="res://asset/textures/hudmenu/bgtuch.png" type="Texture" id=6]
+[ext_resource path="res://asset/textures/gta/phone1.png" type="Texture" id=7]
+[ext_resource path="res://asset/textures/hudmenu/button1.png" type="Texture" id=8]
+[ext_resource path="res://asset/textures/hudmenu/stick2.png" type="Texture" id=9]
+[ext_resource path="res://asset/textures/32text/pointer.png" type="Texture" id=10]
+[ext_resource path="res://asset/textures/hudmenu/bg1.png" type="Texture" id=11]
+[ext_resource path="res://asset/textures/32text/cash.png" type="Texture" id=12]
+[ext_resource path="res://asset/textures/gta/gun.png" type="Texture" id=13]
+[ext_resource path="res://asset/textures/gta/soda2.png" type="Texture" id=14]
+[ext_resource path="res://asset/textures/gta/mgun.png" type="Texture" id=15]
+[ext_resource path="res://asset/textures/32text/32window1.png" type="Texture" id=16]
+[ext_resource path="res://asset/textures/gta/bat.png" type="Texture" id=17]
+[ext_resource path="res://asset/textures/gta/food.png" type="Texture" id=18]
+[ext_resource path="res://asset/textures/gta/face1.png" type="Texture" id=19]
+[ext_resource path="res://asset/sounds/phonecall.ogg" type="AudioStream" id=20]
+[ext_resource path="res://asset/textures/gta/medecine1.png" type="Texture" id=21]
+[ext_resource path="res://asset/textures/gta/face5.png" type="Texture" id=22]
+[ext_resource path="res://asset/textures/gta/face8.png" type="Texture" id=23]
+[ext_resource path="res://asset/textures/gta/face7.png" type="Texture" id=24]
+[ext_resource path="res://asset/textures/black1.png" type="Texture" id=25]
+[ext_resource path="res://asset/textures/32text/32barsign.png" type="Texture" id=26]
+[ext_resource path="res://asset/textures/gta/hand1.png" type="Texture" id=27]
+[ext_resource path="res://asset/textures/32text/blackwood.png" type="Texture" id=28]
+[ext_resource path="res://asset/textures/32text/32glass.png" type="Texture" id=29]
+[ext_resource path="res://asset/textures/32text/32hopsign.png" type="Texture" id=30]
+[ext_resource path="res://asset/textures/32text/32foodsign.png" type="Texture" id=31]
+[ext_resource path="res://asset/textures/barwh.png" type="Texture" id=32]
+[ext_resource path="res://asset/textures/32text/32gunsign.png" type="Texture" id=33]
+[ext_resource path="res://asset/textures/32text/32polsign.png" type="Texture" id=34]
+[ext_resource path="res://asset/textures/gta/map.png" type="Texture" id=35]
+[ext_resource path="res://asset/textures/gta/bararmor.png" type="Texture" id=36]
+
+[sub_resource type="CapsuleShape" id=24]
+radius = 0.356396
+height = 2.24441
+
+[sub_resource type="Animation" id=25]
+resource_name = "findtrot"
+length = 3.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.28697, 1.7, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 46, 0 ), Vector3( 0, -45, 0 ), Vector3( 0, 130, 0 ), Vector3( 0, 280, 0 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "call"
+tracks/0/type = "value"
+tracks/0/path = NodePath("map:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("save:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("call:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("father:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mother:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("brother:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sister:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "calling"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 294, 407 ), Vector2( -31, 272 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 22.5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6, 6 ), Vector2( 10, 10 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("father:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.001 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mother:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.0333656 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("brother:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.0333656 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sister:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.0333656 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "map"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 294, 407 ), Vector2( 536, 265 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6, 6 ), Vector2( 15, 15 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("map:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("save:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("call:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("time:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -13.5, -19 ), Vector2( -8.03333, 22.5333 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("time:rect_scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ), Vector2( 0.4, 0.4 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../minimap:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../minimap:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "phone"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 303, 659 ), Vector2( 294, 407 ) ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "Anim"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06253, 0.215505 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0, 0, 0 ), Color( 0.290196, 0, 0, 0.788235 ), Color( 0.290196, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "endgame"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../dead:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../black:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.670588 ) ]
+}
+
+[node name="KineFPS" type="KinematicBody"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource( 5 )
+
+[node name="meshfps" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="Camerafps" type="Camera" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.466, -0.011 )
+current = true
+far = 60.0
+
+[node name="weaponsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+pitch_scale = 2.0
+
+[node name="guncast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9061, 0.0402837 )
+enabled = true
+cast_to = Vector3( 0, 0, 50 )
+collision_mask = 5
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.48766, 0 )
+shape = SubResource( 24 )
+
+[node name="GroundRay" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.318, 0 )
+enabled = true
+cast_to = Vector3( 0, -0.8, 0 )
+
+[node name="J2" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 921.209, 418.846 )
+scale = Vector2( 2.19073, 2.07181 )
+normal = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="J2"]
+visible = false
+margin_right = 32.0
+margin_bottom = 31.0
+text = "J"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="J2"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+texture = ExtResource( 8 )
+
+[node name="gun" type="TouchScreenButton" parent="."]
+self_modulate = Color( 0.454902, 0, 1, 0.741176 )
+position = Vector2( 907, 496 )
+scale = Vector2( 3, 3 )
+normal = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="gun"]
+visible = false
+margin_right = 32.0
+margin_bottom = 27.0
+text = "J"
+align = 1
+valign = 1
+
+[node name="C" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 930, 351 )
+rotation = 0.0872665
+scale = Vector2( 1.93361, 1.44931 )
+normal = ExtResource( 6 )
+passby_press = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="C"]
+margin_left = -2.17032
+margin_top = 6.4869
+margin_right = 62.8297
+margin_bottom = 37.4869
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.0784314, 0, 1, 1 )
+text = "Run"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="C"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+texture = ExtResource( 8 )
+
+[node name="B" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 930, 78 )
+rotation = 0.0872665
+scale = Vector2( 1.93361, 1.44931 )
+normal = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="B"]
+margin_left = -2.17032
+margin_top = 6.4869
+margin_right = 62.8297
+margin_bottom = 37.4869
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.407843, 0.227451, 0, 1 )
+text = "Bag"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="B"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+rotation = 3.14159
+texture = ExtResource( 8 )
+
+[node name="A" type="TouchScreenButton" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 34.0001, 314 )
+rotation = -0.0872665
+scale = Vector2( 3, 3 )
+normal = ExtResource( 6 )
+passby_press = true
+
+[node name="icon" type="Sprite" parent="A"]
+position = Vector2( 3.26251, 0.954643 )
+centered = false
+
+[node name="Sprite" type="Sprite" parent="A"]
+self_modulate = Color( 0.65098, 0.65098, 0.65098, 0.290196 )
+position = Vector2( 16.3333, 20.6667 )
+texture = ExtResource( 8 )
+
+[node name="Virtual joystick" parent="." instance=ExtResource( 3 )]
+modulate = Color( 1, 1, 1, 0.184314 )
+margin_left = -2.0
+margin_top = -195.0
+margin_right = 198.0
+margin_bottom = 5.0
+deadzone_size = 5.0
+use_input_actions = false
+
+[node name="npc" type="Spatial" parent="."]
+transform = Transform( 0.694658, 0, 0.719339, 0, 1, 0, -0.719339, 0, 0.694658, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="npc"]
+autoplay = "findtrot"
+anims/findtrot = SubResource( 25 )
+
+[node name="RayCast" type="RayCast" parent="npc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 50 )
+enabled = true
+cast_to = Vector3( 0, -0.5, 0 )
+
+[node name="RayCastCar" type="RayCast" parent="npc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 50 )
+enabled = true
+cast_to = Vector3( 0, -0.5, 0 )
+collision_mask = 512
+
+[node name="delaydoor" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="phone" type="Sprite" parent="."]
+position = Vector2( 303, 659 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 7 )
+
+[node name="father" type="Button" parent="phone"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -10.0
+margin_top = -6.0
+margin_right = 91.0
+margin_bottom = 31.0
+rect_scale = Vector2( 0.2, 0.15 )
+theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.294118, 0.294118, 1 )
+custom_colors/font_color_focus = Color( 0.74902, 0.168627, 0.168627, 1 )
+custom_colors/font_color = Color( 0.501961, 0.294118, 0.294118, 1 )
+shortcut_in_tooltip = false
+text = "Father"
+flat = true
+
+[node name="mother" type="Button" parent="phone"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -10.0
+margin_top = 2.50003
+margin_right = 100.0
+margin_bottom = 39.5
+rect_scale = Vector2( 0.2, 0.15 )
+theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.294118, 0.294118, 1 )
+custom_colors/font_color_focus = Color( 0.74902, 0.168627, 0.168627, 1 )
+custom_colors/font_color = Color( 0.501961, 0.294118, 0.294118, 1 )
+shortcut_in_tooltip = false
+text = "Mother"
+flat = true
+
+[node name="brother" type="Button" parent="phone"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -11.0
+margin_top = 11.0
+margin_right = 104.0
+margin_bottom = 48.0
+rect_scale = Vector2( 0.2, 0.15 )
+theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.294118, 0.294118, 1 )
+custom_colors/font_color_focus = Color( 0.74902, 0.168627, 0.168627, 1 )
+custom_colors/font_color = Color( 0.501961, 0.294118, 0.294118, 1 )
+shortcut_in_tooltip = false
+text = "Brother"
+flat = true
+
+[node name="sister" type="Button" parent="phone"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -11.0
+margin_top = 18.5
+margin_right = 104.0
+margin_bottom = 55.5
+rect_scale = Vector2( 0.2, 0.15 )
+theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.501961, 0.294118, 0.294118, 1 )
+custom_colors/font_color_focus = Color( 0.74902, 0.168627, 0.168627, 1 )
+custom_colors/font_color = Color( 0.501961, 0.294118, 0.294118, 1 )
+shortcut_in_tooltip = false
+text = "Sister"
+flat = true
+
+[node name="phone" type="Button" parent="phone"]
+margin_left = -11.0
+margin_top = -27.0
+margin_right = 100.0
+margin_bottom = 10.0
+rect_scale = Vector2( 0.2, 0.2 )
+focus_mode = 0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.188235, 0.247059, 0.423529, 1 )
+shortcut_in_tooltip = false
+text = "Phone"
+flat = true
+
+[node name="map" type="Button" parent="phone"]
+margin_left = -12.0
+margin_top = -1.0
+margin_right = 81.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.25, 0.2 )
+focus_mode = 0
+theme = ExtResource( 1 )
+text = "Map"
+flat = true
+
+[node name="light" type="Button" parent="phone"]
+margin_left = -12.0
+margin_top = 8.83331
+margin_right = 81.0
+margin_bottom = 53.8333
+rect_scale = Vector2( 0.25, 0.2 )
+focus_mode = 0
+theme = ExtResource( 1 )
+shortcut_in_tooltip = false
+text = "Light"
+flat = true
+
+[node name="call" type="Button" parent="phone"]
+margin_left = -12.0
+margin_top = -9.66663
+margin_right = 81.0
+margin_bottom = 32.3334
+rect_scale = Vector2( 0.25, 0.2 )
+focus_mode = 0
+theme = ExtResource( 1 )
+text = "Call"
+flat = true
+
+[node name="save" type="Button" parent="phone"]
+margin_left = -12.1666
+margin_top = 18.8334
+margin_right = 80.8334
+margin_bottom = 69.8333
+rect_scale = Vector2( 0.25, 0.2 )
+focus_mode = 0
+theme = ExtResource( 1 )
+text = "Save"
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="phone"]
+anims/call = SubResource( 28 )
+anims/calling = SubResource( 29 )
+anims/map = SubResource( 27 )
+anims/phone = SubResource( 26 )
+
+[node name="time" type="Label" parent="phone"]
+margin_left = -13.5
+margin_top = -19.0
+margin_right = 22.5
+margin_bottom = -5.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_colors/font_color = Color( 0, 0.737255, 0.0470588, 1 )
+text = "19:24"
+
+[node name="delayrespond" type="Timer" parent="phone"]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="phone"]
+stream = ExtResource( 20 )
+
+[node name="popup" type="Label" parent="phone"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 29.1667
+margin_top = -107.833
+margin_right = 118.167
+margin_bottom = -93.8333
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 1, 0.890196, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
+text = "Map Updated!"
+
+[node name="called" type="Sprite" parent="phone"]
+visible = false
+position = Vector2( 1.54972e-06, 8.33333 )
+scale = Vector2( 1.16667, 1.83333 )
+texture = ExtResource( 25 )
+
+[node name="label" type="Label" parent="phone/called"]
+margin_left = -10.4286
+margin_top = -8.90909
+margin_right = 29.5714
+margin_bottom = 22.0909
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Father
+Call"
+align = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+self_modulate = Color( 0.47451, 0.47451, 0.47451, 0.545098 )
+position = Vector2( 512, 320 )
+texture = ExtResource( 10 )
+
+[node name="bag" type="Control" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.839216 )
+margin_left = 129.0
+margin_right = 169.0
+margin_bottom = 40.0
+
+[node name="bgs" type="Control" parent="bag"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="bg" type="Sprite" parent="bag/bgs"]
+modulate = Color( 0.537255, 0.352941, 0.0980392, 1 )
+show_behind_parent = true
+position = Vector2( 268, -1 )
+scale = Vector2( 15.0625, 18.8438 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="inventory" type="Control" parent="bag"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.7, 0.7 )
+
+[node name="weapons" type="Label" parent="bag/inventory"]
+margin_left = 413.857
+margin_top = 21.7143
+margin_right = 858.857
+margin_bottom = 45.7143
+rect_scale = Vector2( 1.4, 1.4 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.67451, 0.223529, 0.223529, 1 )
+text = "Weapons"
+align = 1
+
+[node name="bgweapons" type="Sprite" parent="bag/inventory/weapons"]
+self_modulate = Color( 0.376471, 0.207843, 0.027451, 1 )
+show_behind_parent = true
+position = Vector2( -1.73468, 3.87756 )
+scale = Vector2( 13.9668, 3.82653 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="nothing" type="Sprite" parent="bag/inventory/weapons"]
+position = Vector2( 93.0204, 73.2245 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 27 )
+
+[node name="bat" type="Sprite" parent="bag/inventory/weapons"]
+visible = false
+position = Vector2( 132.633, 43 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 17 )
+centered = false
+
+[node name="gun" type="Sprite" parent="bag/inventory/weapons"]
+visible = false
+position = Vector2( 199.51, 41.9796 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Label" type="Label" parent="bag/inventory/weapons/gun"]
+margin_left = 6.02042
+margin_top = 16.2347
+margin_right = 57.0204
+margin_bottom = 40.2347
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "50"
+
+[node name="mgun" type="Sprite" parent="bag/inventory/weapons"]
+visible = false
+position = Vector2( 268.511, 38.9184 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Label" type="Label" parent="bag/inventory/weapons/mgun"]
+margin_left = 7.60208
+margin_top = 18.8316
+margin_right = 58.6021
+margin_bottom = 42.8316
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "50"
+
+[node name="mgun4" type="Sprite" parent="bag/inventory/weapons"]
+visible = false
+position = Vector2( 338.918, 37.8979 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Label" type="Label" parent="bag/inventory/weapons/mgun4"]
+margin_left = 7.60208
+margin_top = 18.8316
+margin_right = 58.6021
+margin_bottom = 42.8316
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "50"
+
+[node name="Goods" type="Label" parent="bag/inventory"]
+margin_left = 544.0
+margin_top = 200.0
+margin_right = 817.0
+margin_bottom = 224.0
+rect_scale = Vector2( 1.5, 1.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.223529, 0.443137, 0.67451, 1 )
+text = "Goods"
+align = 1
+
+[node name="drink" type="Sprite" parent="bag/inventory/Goods"]
+position = Vector2( 4.58621, 56.8718 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 14 )
+
+[node name="amount" type="Label" parent="bag/inventory/Goods/drink"]
+anchor_left = -0.079772
+anchor_top = -0.0116214
+anchor_right = 0.170228
+anchor_bottom = -0.0116214
+margin_left = -13.4473
+margin_top = 15.2803
+margin_right = 37.5527
+margin_bottom = 39.2803
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.129412, 0.407843, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="food" type="Sprite" parent="bag/inventory/Goods"]
+position = Vector2( 130.081, 56.8718 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 18 )
+
+[node name="amount" type="Label" parent="bag/inventory/Goods/food"]
+anchor_left = -0.0802679
+anchor_top = -0.0116214
+anchor_right = -0.0802679
+anchor_bottom = -0.0116214
+margin_left = -11.9821
+margin_top = 12.3499
+margin_right = 39.0179
+margin_bottom = 36.3499
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.129412, 0.407843, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="medicine" type="Sprite" parent="bag/inventory/Goods"]
+position = Vector2( 241.216, 56.8718 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 21 )
+
+[node name="amount" type="Label" parent="bag/inventory/Goods/medicine"]
+anchor_left = -0.017272
+anchor_top = -0.0116214
+anchor_right = 0.045228
+anchor_bottom = -0.0116214
+margin_left = -11.9821
+margin_top = 12.3499
+margin_right = 39.0179
+margin_bottom = 36.3499
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.129412, 0.407843, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="cash" type="Sprite" parent="bag/inventory/Goods"]
+visible = false
+position = Vector2( 243.195, 50.5818 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="bag/inventory/Goods/cash"]
+margin_left = -20.4314
+margin_top = 10.3719
+margin_right = 30.5686
+margin_bottom = 34.3719
+rect_scale = Vector2( 0.8, 0.8 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0.666667, 0.0313726, 1 )
+text = "000"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bggoods" type="Sprite" parent="bag/inventory/Goods"]
+self_modulate = Color( 0.376471, 0.207843, 0.027451, 1 )
+show_behind_parent = true
+position = Vector2( -87.6195, 146.52 )
+scale = Vector2( 13.006, -4.618 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="family" type="Label" parent="bag/inventory"]
+visible = false
+margin_left = 548.571
+margin_top = 450.0
+margin_right = 821.571
+margin_bottom = 474.0
+rect_scale = Vector2( 1.5, 1.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.258824, 0.67451, 0.223529, 1 )
+text = "Family Members"
+
+[node name="bgfamily" type="Sprite" parent="bag/inventory/family"]
+self_modulate = Color( 0.376471, 0.207843, 0.027451, 1 )
+show_behind_parent = true
+position = Vector2( -91.4286, -20.9524 )
+scale = Vector2( 13.0357, 8.33333 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="father" type="Sprite" parent="bag/inventory/family"]
+position = Vector2( -149.523, 264.762 )
+texture = ExtResource( 19 )
+offset = Vector2( 84.7616, -153.333 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="name" type="Label" parent="bag/inventory/family/father"]
+margin_left = 111.428
+margin_top = -168.571
+margin_right = 224.428
+margin_bottom = -144.571
+rect_scale = Vector2( 0.8, 0.8 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "Father :"
+
+[node name="what" type="Label" parent="bag/inventory/family/father"]
+margin_left = 230.0
+margin_top = -169.905
+margin_right = 714.0
+margin_bottom = -80.9048
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Unknowg"
+
+[node name="mother" type="Sprite" parent="bag/inventory/family"]
+position = Vector2( -65.7143, 156.19 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="name" type="Label" parent="bag/inventory/family/mother"]
+margin_left = 22.8574
+margin_top = -15.2378
+margin_right = 144.857
+margin_bottom = 8.76224
+rect_scale = Vector2( 0.8, 0.8 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "Mother :"
+
+[node name="what" type="Label" parent="bag/inventory/family/mother"]
+margin_left = 147.62
+margin_top = -4.7616
+margin_right = 269.62
+margin_bottom = 19.2384
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Unknow"
+
+[node name="brother" type="Sprite" parent="bag/inventory/family"]
+position = Vector2( -214.285, 102.857 )
+texture = ExtResource( 24 )
+offset = Vector2( 148.571, -37.143 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="name" type="Label" parent="bag/inventory/family/brother"]
+margin_left = 167.619
+margin_top = -50.4762
+margin_right = 294.619
+margin_bottom = -26.4762
+rect_scale = Vector2( 0.8, 0.8 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "Brother :"
+
+[node name="what" type="Label" parent="bag/inventory/family/brother"]
+margin_left = 299.048
+margin_top = -40.0
+margin_right = 426.048
+margin_bottom = -16.0
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Unknow"
+
+[node name="sister" type="Sprite" parent="bag/inventory/family"]
+position = Vector2( -65.7143, 200.952 )
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="name" type="Label" parent="bag/inventory/family/sister"]
+margin_left = 33.3337
+margin_top = -15.2381
+margin_right = 143.334
+margin_bottom = 8.76193
+rect_scale = Vector2( 0.8, 0.8 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.913725, 0.180392, 0.180392, 1 )
+text = "Sister :"
+
+[node name="what" type="Label" parent="bag/inventory/family/sister"]
+margin_left = 151.429
+margin_top = -4.76196
+margin_right = 273.429
+margin_bottom = 19.2381
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Unknow"
+
+[node name="descg1" type="Label" parent="bag"]
+margin_left = 335.0
+margin_top = 246.0
+margin_right = 419.0
+margin_bottom = 281.0
+rect_scale = Vector2( 1, 1.5 )
+custom_colors/font_color = Color( 0.580392, 0.592157, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Refill your Run bar"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="descg2" type="Label" parent="bag"]
+margin_left = 465.0
+margin_top = 244.0
+margin_right = 576.0
+margin_bottom = 277.0
+rect_scale = Vector2( 1, 1.5 )
+custom_colors/font_color = Color( 0.580392, 0.592157, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Refill a small amount of life"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="descg3" type="Label" parent="bag"]
+margin_left = 589.0
+margin_top = 244.0
+margin_right = 687.0
+margin_bottom = 277.0
+rect_scale = Vector2( 1, 1.5 )
+custom_colors/font_color = Color( 0.580392, 0.592157, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Refill half of your  life"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="sodabag" type="Button" parent="bag"]
+margin_left = 364.0
+margin_top = 174.0
+margin_right = 401.0
+margin_bottom = 244.0
+focus_mode = 0
+shortcut_in_tooltip = false
+flat = true
+
+[node name="medbag" type="Button" parent="bag"]
+margin_left = 612.0
+margin_top = 174.0
+margin_right = 659.0
+margin_bottom = 242.0
+focus_mode = 0
+shortcut_in_tooltip = false
+flat = true
+
+[node name="foodbag" type="Button" parent="bag"]
+margin_left = 496.0
+margin_top = 180.0
+margin_right = 541.0
+margin_bottom = 243.0
+focus_mode = 0
+flat = true
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.274318, 2.14247, 0.265351 )
+visible = false
+light_color = Color( 1, 0.937255, 0.8, 1 )
+light_energy = 3.0
+light_indirect_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 0
+spot_range = 20.0
+spot_angle = 35.0
+
+[node name="hud" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="life" type="Sprite" parent="hud"]
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 888, 4 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 32 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/life"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/life"]
+self_modulate = Color( 1, 0, 0, 1 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="armor" type="Sprite" parent="hud/life"]
+self_modulate = Color( 0, 0.0862745, 1, 0.682353 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 36 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/life"]
+self_modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 18.0087
+margin_top = -1.64706
+margin_right = 103.009
+margin_bottom = 22.3529
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.686275, 0.686275, 0.686275, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Life"
+
+[node name="fatherlife" type="Sprite" parent="hud"]
+visible = false
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 816, 2 )
+texture = ExtResource( 32 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/fatherlife"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/fatherlife"]
+self_modulate = Color( 0.741176, 0.278431, 0.027451, 1 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="armor" type="Sprite" parent="hud/fatherlife"]
+self_modulate = Color( 0, 0.0862745, 1, 0.682353 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 36 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/fatherlife"]
+self_modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 3.0
+margin_top = -2.0
+margin_right = 129.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.401, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.882353, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Father"
+
+[node name="motherlife" type="Sprite" parent="hud"]
+visible = false
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 816, 22 )
+texture = ExtResource( 32 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/motherlife"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/motherlife"]
+self_modulate = Color( 0.741176, 0.278431, 0.027451, 1 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="armor" type="Sprite" parent="hud/motherlife"]
+self_modulate = Color( 0, 0.0862745, 1, 0.682353 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 36 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/motherlife"]
+self_modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 3.0
+margin_top = -2.0
+margin_right = 129.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.401, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.882353, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Mother"
+
+[node name="brotherlife" type="Sprite" parent="hud"]
+visible = false
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 816, 42 )
+texture = ExtResource( 32 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/brotherlife"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/brotherlife"]
+self_modulate = Color( 0.741176, 0.278431, 0.027451, 1 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="armor" type="Sprite" parent="hud/brotherlife"]
+self_modulate = Color( 0, 0.0862745, 1, 0.682353 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 36 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/brotherlife"]
+self_modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 3.0
+margin_top = -2.0
+margin_right = 129.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.401, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.882353, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Brother"
+
+[node name="sisterlife" type="Sprite" parent="hud"]
+visible = false
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 816, 62 )
+texture = ExtResource( 32 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/sisterlife"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/sisterlife"]
+self_modulate = Color( 0.741176, 0.278431, 0.027451, 1 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="armor" type="Sprite" parent="hud/sisterlife"]
+self_modulate = Color( 0, 0.0862745, 1, 0.682353 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 36 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/sisterlife"]
+self_modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 3.0
+margin_top = -2.0
+margin_right = 129.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.401, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.882353, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Sister"
+
+[node name="run" type="Sprite" parent="hud"]
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 888, 45 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 32 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/run"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/run"]
+self_modulate = Color( 0.0980392, 0.215686, 1, 1 )
+texture = ExtResource( 32 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/run"]
+self_modulate = Color( 1, 1, 1, 0.443137 )
+margin_top = -2.0
+margin_right = 128.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.784314, 0.705882, 0.188235, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Run"
+align = 1
+valign = 1
+
+[node name="enemy" type="Label" parent="hud"]
+visible = false
+margin_left = 758.0
+margin_top = 82.0
+margin_right = 1286.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.5, 1 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.721569, 0.721569, 0.721569, 1 )
+text = "Enemies in disctrict : 6"
+align = 2
+
+[node name="weapon" type="Control" parent="hud"]
+margin_left = 900.0
+margin_top = 300.0
+margin_right = 900.0
+margin_bottom = 300.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="icon" type="Sprite" parent="hud/weapon"]
+position = Vector2( 6.66669, 34.3333 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 27 )
+centered = false
+
+[node name="ammo" type="Label" parent="hud/weapon"]
+margin_left = 2.00003
+margin_top = 67.0
+margin_right = 65.0
+margin_bottom = 108.0
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.376471, 0.376471, 0.376471, 1 )
+text = "20"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="cash" type="Label" parent="hud"]
+visible = false
+margin_left = 741.0
+margin_top = 3.0
+margin_right = 852.0
+margin_bottom = 27.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.54902, 0.768627, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100"
+align = 2
+valign = 1
+
+[node name="cash2" type="Label" parent="hud"]
+visible = false
+margin_left = 768.0
+margin_top = 3.0
+margin_right = 879.0
+margin_bottom = 27.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.54902, 0.768627, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "$"
+align = 2
+valign = 1
+
+[node name="touched" type="Sprite" parent="hud"]
+self_modulate = Color( 0.290196, 0, 0, 0 )
+position = Vector2( 513, 311.5 )
+scale = Vector2( 32.5, 20.7813 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hud/touched"]
+anims/Anim = SubResource( 30 )
+anims/endgame = SubResource( 31 )
+
+[node name="minimap" type="ViewportContainer" parent="."]
+visible = false
+margin_left = 251.0
+margin_top = 97.0
+margin_right = 851.0
+margin_bottom = 447.0
+rect_min_size = Vector2( 600, 350 )
+stretch = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Viewport" type="Viewport" parent="minimap"]
+size = Vector2( 600, 350 )
+handle_input_locally = false
+disable_3d = true
+usage = 0
+render_target_update_mode = 0
+shadow_atlas_quad_0 = 0
+shadow_atlas_quad_1 = 0
+shadow_atlas_quad_2 = 0
+shadow_atlas_quad_3 = 0
+
+[node name="map" type="Sprite" parent="minimap/Viewport"]
+scale = Vector2( 1.25, 0.65 )
+texture = ExtResource( 35 )
+centered = false
+
+[node name="icons" type="Node2D" parent="minimap/Viewport/map"]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+
+[node name="police1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 456, 870 )
+texture = ExtResource( 34 )
+
+[node name="police2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 305, 579 )
+texture = ExtResource( 34 )
+
+[node name="police3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 793, 657 )
+texture = ExtResource( 34 )
+
+[node name="hopital1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 389, 801 )
+texture = ExtResource( 30 )
+
+[node name="hopital2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 418, 373 )
+texture = ExtResource( 30 )
+
+[node name="hopital3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 681, 581 )
+texture = ExtResource( 30 )
+
+[node name="ggun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 201, 668 )
+texture = ExtResource( 33 )
+
+[node name="ygun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 455, 446 )
+texture = ExtResource( 33 )
+
+[node name="bgun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 610, 544 )
+texture = ExtResource( 33 )
+
+[node name="rgun" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 512, 665 )
+texture = ExtResource( 33 )
+
+[node name="gfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 231, 668 )
+texture = ExtResource( 31 )
+
+[node name="gfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 451, 764 )
+texture = ExtResource( 31 )
+
+[node name="gfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 471, 934 )
+texture = ExtResource( 31 )
+
+[node name="yfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 470, 585 )
+texture = ExtResource( 31 )
+
+[node name="yfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 190, 541 )
+texture = ExtResource( 31 )
+
+[node name="yfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 359, 472 )
+texture = ExtResource( 31 )
+
+[node name="bfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 570, 403 )
+texture = ExtResource( 31 )
+
+[node name="bfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 750, 388 )
+texture = ExtResource( 31 )
+
+[node name="bfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 513, 597 )
+texture = ExtResource( 31 )
+
+[node name="rfood1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 724, 669 )
+texture = ExtResource( 31 )
+
+[node name="rfood2" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 622, 765 )
+texture = ExtResource( 31 )
+
+[node name="rfood3" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 570, 891 )
+texture = ExtResource( 31 )
+
+[node name="gbar1" type="Sprite" parent="minimap/Viewport/map/icons"]
+position = Vector2( 570, 891 )
+texture = ExtResource( 26 )
+
+[node name="places" type="Node2D" parent="minimap/Viewport/map"]
+self_modulate = Color( 1, 1, 1, 0.207843 )
+
+[node name="housemap" type="Sprite" parent="minimap/Viewport/map/places"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 150, 410 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/housemap"]
+margin_left = -60.0
+margin_top = -60.0
+margin_right = 2.0
+margin_bottom = -46.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "House"
+
+[node name="parenthousemap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 275, 290 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/parenthousemap"]
+margin_left = -80.0
+margin_top = -60.0
+margin_right = -18.0
+margin_bottom = -46.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Parents house"
+
+[node name="brotherhousemap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 325, 480 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/brotherhousemap"]
+margin_left = -140.0
+margin_top = 20.0
+margin_right = -49.0
+margin_bottom = 34.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Brother house"
+
+[node name="sisterhousemap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 160, 155 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/sisterhousemap"]
+margin_left = -200.0
+margin_top = -70.0
+margin_right = -121.0
+margin_bottom = -56.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Sister house"
+
+[node name="hospitalmap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 0, 1, 0.0156863, 1 )
+position = Vector2( 340, 300 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/hospitalmap"]
+margin_left = -70.0
+margin_top = -60.0
+margin_right = -8.0
+margin_bottom = -29.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 0.172549, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Hospital
+"
+
+[node name="policemap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 0, 1, 0.0156863, 1 )
+position = Vector2( 150, 300 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/policemap"]
+margin_left = -50.0
+margin_top = -60.0
+margin_right = 12.0
+margin_bottom = -46.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 0.172549, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Police"
+
+[node name="sistermap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 0, 1, 0.0156863, 1 )
+position = Vector2( 235, 181.454 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/sistermap"]
+margin_left = -50.0
+margin_top = -70.0
+margin_right = 12.0
+margin_bottom = -56.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 0.172549, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Sister"
+
+[node name="West Portmap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 0.968627, 1, 0, 1 )
+position = Vector2( 80, 410 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/West Portmap"]
+margin_left = -180.0
+margin_top = -60.0
+margin_right = -117.0
+margin_bottom = -46.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "West Port"
+
+[node name="East Portmap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 0.968627, 1, 0, 1 )
+position = Vector2( 405, 400 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/East Portmap"]
+margin_left = 10.0
+margin_top = -60.0
+margin_right = 72.0
+margin_bottom = -46.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "East Port"
+
+[node name="Airportmap" type="Sprite" parent="minimap/Viewport/map/places"]
+visible = false
+self_modulate = Color( 0.968627, 1, 0, 1 )
+position = Vector2( 405, 190 )
+scale = Vector2( 0.3, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="minimap/Viewport/map/places/Airportmap"]
+margin_left = 10.0
+margin_top = -60.0
+margin_right = 72.0
+margin_bottom = -46.0
+rect_scale = Vector2( 2.6, 4.4 )
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Airport"
+
+[node name="obj" type="Node2D" parent="minimap/Viewport/map"]
+self_modulate = Color( 1, 1, 1, 0.207843 )
+
+[node name="wall0" type="Sprite" parent="minimap/Viewport/map/obj"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 247.135, 118.651 )
+rotation = 1.5708
+scale = Vector2( 0.426, 0.732 )
+texture = ExtResource( 28 )
+
+[node name="wall1" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 320, 310 )
+scale = Vector2( 0.138, 0.673 )
+texture = ExtResource( 28 )
+
+[node name="wall2" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 191, 172 )
+rotation = 0.261799
+scale = Vector2( 0.138, 0.673 )
+texture = ExtResource( 28 )
+
+[node name="wall3" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 247, 350 )
+rotation = 1.5708
+scale = Vector2( 0.311, 0.576 )
+texture = ExtResource( 28 )
+
+[node name="wall4" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 354, 372 )
+scale = Vector2( 0.138, 0.673 )
+texture = ExtResource( 28 )
+
+[node name="wall5" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 130, 240 )
+rotation = 1.5708
+scale = Vector2( 0.27, 0.349 )
+texture = ExtResource( 28 )
+
+[node name="wall6" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 200, 445 )
+scale = Vector2( 0.138, 0.673 )
+texture = ExtResource( 28 )
+
+[node name="wall7" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 165, 264 )
+rotation = 1.5708
+scale = Vector2( 0.27, 0.349 )
+texture = ExtResource( 28 )
+
+[node name="wall8" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 355, 257 )
+rotation = 1.5708
+scale = Vector2( 0.27, 0.349 )
+texture = ExtResource( 28 )
+
+[node name="wall9" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 266, 220 )
+scale = Vector2( 0.162, 0.624 )
+texture = ExtResource( 28 )
+
+[node name="wall10" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 299, 446 )
+rotation = 1.5708
+scale = Vector2( 0.27, 0.349 )
+texture = ExtResource( 28 )
+
+[node name="wall11" type="Sprite" parent="minimap/Viewport/map/obj"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 130, 333 )
+rotation = 1.5708
+scale = Vector2( 0.27, 0.349 )
+texture = ExtResource( 28 )
+
+[node name="pointer" type="Sprite" parent="minimap"]
+position = Vector2( 307, 201 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="bg" type="Sprite" parent="minimap"]
+self_modulate = Color( 0.196078, 0.196078, 0.196078, 0.682353 )
+show_behind_parent = true
+position = Vector2( -3.99997, -6 )
+scale = Vector2( 18.8438, 11.2813 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="black" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 513, 299 )
+scale = Vector2( 54.2, 35.1 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="dead" type="Label" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 51.0
+margin_top = 77.4683
+margin_right = 367.0
+margin_bottom = 179.468
+rect_scale = Vector2( 3, 3 )
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "You are dead"
+align = 1
+valign = 1
+
+[connection signal="body_entered" from="meshfps/Armature/Bone/Bone001/Bone003/Bone004/Bone005/handr/Areapunch" to="." method="_on_Areapunch_body_entered"]
+[connection signal="body_entered" from="meshfps/Armature/Bone/Bone001/Bone003/Bone004/Bone005/bat/Areabat" to="." method="_on_Areabat_body_entered"]
+[connection signal="pressed" from="J2" to="." method="_on_J2_pressed"]
+[connection signal="pressed" from="B" to="." method="_on_B_pressed"]
+[connection signal="pressed" from="A" to="." method="_on_A_pressed"]
+[connection signal="timeout" from="delaydoor" to="." method="_on_delaydoor_timeout"]
+[connection signal="pressed" from="phone/father" to="." method="_on_father_pressed"]
+[connection signal="pressed" from="phone/mother" to="." method="_on_mother_pressed"]
+[connection signal="pressed" from="phone/brother" to="." method="_on_brother_pressed"]
+[connection signal="pressed" from="phone/sister" to="." method="_on_sister_pressed"]
+[connection signal="pressed" from="phone/phone" to="." method="_on_phone_pressed"]
+[connection signal="pressed" from="phone/map" to="." method="_on_map_pressed"]
+[connection signal="pressed" from="phone/light" to="." method="_on_light_pressed"]
+[connection signal="pressed" from="phone/call" to="." method="_on_call_pressed"]
+[connection signal="pressed" from="phone/save" to="." method="_on_save_pressed"]
+[connection signal="timeout" from="phone/delayrespond" to="." method="_on_delayrespond_timeout"]
+[connection signal="pressed" from="bag/sodabag" to="." method="_on_sodabag_pressed"]
+[connection signal="pressed" from="bag/medbag" to="." method="_on_medbag_pressed"]
+[connection signal="pressed" from="bag/foodbag" to="." method="_on_foodbag_pressed"]
+
+[editable path="meshfps"]

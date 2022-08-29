@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pilotwingsislandsky.obj-8d23885e5f4c575df6c60dc83d9b53d0.mesh"
+
+[deps]
+
+files=[ "res://.import/pilotwingsislandsky.obj-8d23885e5f4c575df6c60dc83d9b53d0.mesh" ]
+
+source_file="res://asset/mesh/pilotwings/pilotwingsislandsky.obj"
+dest_files=[ "res://.import/pilotwingsislandsky.obj-8d23885e5f4c575df6c60dc83d9b53d0.mesh", "res://.import/pilotwingsislandsky.obj-8d23885e5f4c575df6c60dc83d9b53d0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

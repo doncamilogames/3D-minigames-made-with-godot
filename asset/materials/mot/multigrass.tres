@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://asset/textures/32text/32stone1.png" type="Texture" id=1]
+
+[resource]
+resource_name = "_3"
+albedo_color = Color( 0.243137, 0.505882, 0.172549, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0
+uv1_scale = Vector3( 500, 100, 50 )

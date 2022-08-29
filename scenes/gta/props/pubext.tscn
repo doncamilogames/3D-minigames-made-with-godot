@@ -1,0 +1,266 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/kinematic/tile/chair1.tres" type="Material" id=1]
+[ext_resource path="res://scenes/kinematic/tile/table1.tres" type="Material" id=2]
+
+[sub_resource type="ArrayMesh" id=28]
+surfaces/0 = {
+"aabb": AABB( -1.3375, 0, -1.17705, 2.82, 1.9126, 2.44219 ),
+"array_data": PoolByteArray( 82, 184, 94, 190, 0, 0, 0, 0, 29, 238, 94, 61, 213, 7, 18, 117, 0, 0, 108, 194, 0, 32, 178, 194, 225, 122, 148, 61, 163, 146, 234, 63, 121, 105, 52, 61, 213, 7, 18, 117, 0, 0, 103, 194, 0, 32, 178, 194, 82, 184, 94, 62, 0, 0, 0, 0, 50, 116, 156, 62, 213, 7, 18, 117, 0, 0, 108, 194, 0, 192, 177, 194, 82, 184, 94, 62, 0, 0, 0, 0, 59, 113, 73, 190, 136, 82, 16, 118, 0, 0, 108, 194, 0, 128, 178, 194, 225, 122, 148, 61, 163, 146, 234, 63, 121, 105, 52, 61, 136, 82, 16, 118, 0, 0, 103, 194, 0, 32, 178, 194, 82, 184, 94, 190, 0, 0, 0, 0, 29, 238, 94, 61, 136, 82, 16, 118, 0, 0, 108, 194, 0, 32, 178, 194, 225, 122, 148, 61, 163, 146, 234, 63, 121, 105, 52, 61, 117, 9, 247, 134, 0, 0, 103, 194, 0, 32, 178, 194, 82, 184, 94, 62, 0, 0, 0, 0, 59, 113, 73, 190, 117, 9, 247, 134, 0, 0, 108, 194, 0, 128, 178, 194, 82, 184, 94, 62, 0, 0, 0, 0, 50, 116, 156, 62, 117, 9, 247, 134, 0, 0, 108, 194, 0, 192, 177, 194, 225, 122, 148, 61, 20, 208, 244, 63, 121, 105, 52, 61, 0, 111, 111, 127, 0, 32, 53, 63, 0, 0, 48, 193, 61, 10, 71, 63, 132, 13, 223, 63, 28, 240, 161, 63, 0, 111, 111, 127, 0, 224, 127, 191, 0, 0, 32, 193, 133, 235, 33, 191, 132, 13, 223, 63, 28, 240, 161, 63, 0, 111, 111, 127, 0, 224, 127, 191, 0, 0, 64, 193, 225, 122, 148, 61, 20, 208, 244, 63, 121, 105, 52, 61, 12, 106, 141, 90, 0, 32, 53, 63, 0, 0, 16, 193, 143, 194, 189, 63, 132, 13, 223, 63, 121, 105, 52, 61, 12, 106, 141, 90, 0, 224, 127, 191, 0, 0, 0, 193, 61, 10, 71, 63, 132, 13, 223, 63, 28, 240, 161, 63, 12, 106, 141, 90, 0, 224, 127, 191, 0, 0, 32, 193, 61, 10, 71, 63, 132, 13, 223, 63, 147, 169, 150, 191, 20, 114, 183, 69, 0, 224, 127, 191, 0, 0, 192, 192, 143, 194, 189, 63, 132, 13, 223, 63, 121, 105, 52, 61, 20, 114, 183, 69, 0, 224, 127, 191, 0, 0, 0, 193, 225, 122, 148, 61, 20, 208, 244, 63, 121, 105, 52, 61, 20, 114, 183, 69, 0, 32, 53, 63, 0, 0, 224, 192, 133, 235, 33, 191, 132, 13, 223, 63, 147, 169, 150, 191, 15, 127, 0, 71, 0, 0, 128, 191, 0, 0, 128, 192, 61, 10, 71, 63, 132, 13, 223, 63, 147, 169, 150, 191, 15, 127, 0, 71, 0, 224, 127, 191, 0, 0, 192, 192, 225, 122, 148, 61, 20, 208, 244, 63, 121, 105, 52, 61, 15, 127, 0, 71, 0, 32, 53, 63, 0, 0, 160, 192, 133, 235, 33, 191, 132, 13, 223, 63, 147, 169, 150, 191, 236, 114, 73, 69, 0, 0, 128, 191, 0, 0, 128, 192, 225, 122, 148, 61, 20, 208, 244, 63, 121, 105, 52, 61, 236, 114, 73, 69, 0, 32, 53, 63, 0, 0, 64, 192, 51, 51, 171, 191, 132, 13, 223, 63, 121, 105, 52, 61, 236, 114, 73, 69, 0, 0, 128, 191, 0, 0, 0, 192, 51, 51, 171, 191, 132, 13, 223, 63, 121, 105, 52, 61, 244, 106, 115, 90, 0, 0, 128, 191, 0, 0, 0, 192, 225, 122, 148, 61, 20, 208, 244, 63, 121, 105, 52, 61, 244, 106, 115, 90, 0, 32, 53, 63, 0, 0, 128, 191, 133, 235, 33, 191, 132, 13, 223, 63, 28, 240, 161, 63, 244, 106, 115, 90, 0, 0, 128, 191, 0, 0, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 23, 0, 24, 0, 25, 0, 26, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 27,
+"material": ExtResource( 2 ),
+"name": "_26",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 27
+}
+
+[sub_resource type="ConvexPolygonShape" id=31]
+points = PoolVector3Array( -0.632776, 1.74242, -1.17705, -0.217615, 0, 0.0543244, -1.3375, 1.74242, 0.0440451, 0.0722241, 1.9126, 0.0440451, 0.777224, 1.74242, -1.17705, 0.21742, 0, -0.196923, -0.632776, 1.74242, 1.26514, 0.21742, 0, 0.305572, 0.777224, 1.74242, 1.26514, 1.48222, 1.74242, 0.0440451 )
+
+[sub_resource type="ArrayMesh" id=30]
+surfaces/0 = {
+"aabb": AABB( -0.4828, 0, -0.4828, 0.96561, 1.45622, 0.96561 ),
+"array_data": PoolByteArray( 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 62, 127, 0, 127, 127, 0, 0, 138, 66, 0, 192, 71, 191, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 190, 127, 0, 127, 127, 0, 0, 140, 66, 0, 224, 217, 188, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 62, 127, 0, 127, 127, 0, 0, 138, 66, 0, 224, 217, 188, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 190, 127, 0, 127, 127, 0, 0, 140, 66, 0, 192, 71, 191, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 142, 66, 0, 192, 71, 191, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 140, 66, 0, 224, 217, 188, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 140, 66, 0, 192, 71, 191, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 142, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 190, 129, 0, 0, 63, 0, 0, 142, 66, 0, 192, 71, 191, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 62, 129, 0, 0, 63, 0, 0, 144, 66, 0, 224, 217, 188, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 190, 129, 0, 0, 63, 0, 0, 142, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 62, 129, 0, 0, 63, 0, 0, 144, 66, 0, 192, 71, 191, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 146, 66, 0, 192, 71, 191, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 144, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 144, 66, 0, 192, 71, 191, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 146, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 190, 0, 127, 0, 63, 0, 64, 142, 66, 0, 192, 71, 191, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 62, 0, 127, 0, 63, 0, 0, 144, 66, 0, 96, 121, 191, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 62, 0, 127, 0, 63, 0, 0, 144, 66, 0, 192, 71, 191, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 190, 0, 127, 0, 63, 0, 64, 142, 66, 0, 96, 121, 191 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0, 12, 0, 13, 0, 14, 0, 13, 0, 12, 0, 15, 0, 16, 0, 17, 0, 18, 0, 17, 0, 16, 0, 19, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 30,
+"material": ExtResource( 1 ),
+"name": "_56",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 20
+}
+
+[sub_resource type="ConvexPolygonShape" id=32]
+points = PoolVector3Array( -0.4828, 0, -0.4828, -0.4828, 0, 0.4828, -0.4828, 1.45621, -0.4828, 0.4828, 0, -0.4828, 0.4828, 0, 0.4828, -0.4828, 1.45621, 0.4828, 0.4828, 1.45621, -0.4828, 0.4828, 1.45621, 0.4828 )
+
+[node name="pubext" type="Spatial"]
+
+[node name="table1" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.73682, 0, -3.94073 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="table" type="MeshInstance" parent="table1"]
+mesh = SubResource( 28 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="table1"]
+shape = SubResource( 31 )
+
+[node name="chair1" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.73682, 0, -2.16455 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair1"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair1"]
+shape = SubResource( 32 )
+
+[node name="chair2" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.73682, 0, -6.16455 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair2"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair2"]
+shape = SubResource( 32 )
+
+[node name="table2" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26318, 0, -3.94073 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="table" type="MeshInstance" parent="table2"]
+mesh = SubResource( 28 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="table2"]
+shape = SubResource( 31 )
+
+[node name="chair3" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26318, 0, -2.16455 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair3"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair3"]
+shape = SubResource( 32 )
+
+[node name="chair4" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26318, 0, -6.16455 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair4"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair4"]
+shape = SubResource( 32 )
+
+[node name="table3" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 3.10492, 0, 3.99371 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="table" type="MeshInstance" parent="table3"]
+mesh = SubResource( 28 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="table3"]
+shape = SubResource( 31 )
+
+[node name="chair5" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 1.84897, 0, 5.24966 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair5"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair5"]
+shape = SubResource( 32 )
+
+[node name="chair6" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 4.67739, 0, 2.42124 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair6"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair6"]
+shape = SubResource( 32 )
+
+[node name="table4" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -4.62491, 0, 4.02928 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="table" type="MeshInstance" parent="table4"]
+mesh = SubResource( 28 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="table4"]
+shape = SubResource( 31 )
+
+[node name="chair7" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -3.73682, 0, 5.5675 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair7"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair7"]
+shape = SubResource( 32 )
+
+[node name="chair8" type="RigidBody" parent="." groups=["breakable"]]
+transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -5.73682, 0, 2.1034 )
+collision_layer = 7
+collision_mask = 7
+mass = 1000.0
+gravity_scale = 50.0
+sleeping = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="chair8"]
+mesh = SubResource( 30 )
+skeleton = NodePath("../../table1")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="chair8"]
+shape = SubResource( 32 )

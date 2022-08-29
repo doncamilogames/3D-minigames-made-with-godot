@@ -1,0 +1,135 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/monsteroftime/npcmot.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=62]
+resource_name = "cutscene"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("flower1/Camera:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4, 5.5, 7.3, 8.3, 8.7, 9, 9.2, 10.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -29.6399, 14.2872, 2.30942 ), Vector3( -28.566, 12.5479, 0.367295 ), Vector3( -28.5815, 13.3588, 4.71632 ), Vector3( -28.5815, 13.3588, 4.71632 ), Vector3( -28.5815, 13.3588, 4.71632 ), Vector3( -28.5815, 13.3588, 4.71632 ), Vector3( -28.5815, 13.3588, 4.71632 ), Vector3( -28.5815, 13.3588, 4.71632 ), Vector3( -22.0924, 30.8499, -32.8874 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("flower1/Camera:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4, 5.5, 7.3, 8.3, 8.7, 9, 9.2, 10.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -11.5525, -178.034, 0.136597 ), Vector3( -11.5525, -178.034, 0.136597 ), Vector3( -1.75757, -29.1014, 0.133893 ), Vector3( -1.522, 5.55545, -0.8892 ), Vector3( -1.7063, -39.2769, 0.442242 ), Vector3( -1.75757, -29.1014, 0.133893 ), Vector3( 21.213, -28.5902, 0.474176 ), Vector3( 21.213, -28.5902, 0.474176 ), Vector3( 32.058, -28.59, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("flower1/grindri:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 10.5, 11.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -21.7423, 30.4936, -36.1457 ), Vector3( -21.7423, 30.4936, -36.1457 ), Vector3( -21.7423, 30.4936, -41.2778 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("flower1/grindri:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10.5, 11.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -45.2393, 178.817, 2.70246 ), Vector3( -45.2393, 178.817, 2.70246 ), Vector3( -45.2393, 178.817, 2.70246 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("..")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.8, 9, 10.8, 12.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ "flower1-1" ],
+"method": "_opendtextbox"
+}, {
+"args": [  ],
+"method": "_closetextbox"
+}, {
+"args": [ "flower1-2" ],
+"method": "_opendtextbox"
+}, {
+"args": [  ],
+"method": "_closetextbox"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("flower1/Camera:current")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 14 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "deletecut"
+} ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("flower1/Posplayer:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 4.3, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 163.433, 0 ), Vector3( 0, 163.433, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[node name="flower1" type="Spatial"]
+
+[node name="grindri" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999366, 0.032496, 0.0145376, 0.0332001, 0.703364, 0.710054, 0.0128487, 0.710087, -0.703997, -21.7423, 30.4936, -36.1457 )
+_type = "grindri"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+autoplay = "cutscene"
+anims/cutscene = SubResource( 62 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.999392, 0.00925304, -0.0336114, 0.00233577, 0.979739, 0.200266, 0.0347834, 0.200066, -0.979165, -29.6399, 14.2872, 2.30942 )
+current = true
+far = 300.0
+
+[node name="Posplayer" type="Position3D" parent="."]
+transform = Transform( -0.958487, 0, 0.285136, 0, 1, 0, -0.285136, 0, -0.958487, -27.7442, 9.9025, 3.75819 )

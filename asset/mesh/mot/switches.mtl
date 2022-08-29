@@ -1,0 +1,28 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _6
+Ka 0.000000 0.000000 0.000000
+Kd 0.247059 0.207843 0.090196
+Ks 0.330000 0.330000 0.330000
+map_Kd switches/_6.png
+
+newmtl _4
+Ka 0.000000 0.000000 0.000000
+Kd 0.203922 0.164706 0.066667
+Ks 0.330000 0.330000 0.330000
+map_Kd switches/_4.png
+
+newmtl deco1temple1
+Ka 0.000000 0.000000 0.000000
+Kd 0.290196 0.282353 0.266667
+Ks 0.330000 0.330000 0.330000
+map_Kd switches/deco1temple1.png
+
+newmtl _7
+Ka 0.000000 0.000000 0.000000
+Kd 0.274510 0.266667 0.227451
+Ks 0.330000 0.330000 0.330000
+map_Kd switches/_7.png
+

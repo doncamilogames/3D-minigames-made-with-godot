@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/flowers1.obj-4f5f500556d4efd82f9ad5bfae1fe5fa.mesh"
+
+[deps]
+
+files=[ "res://.import/flowers1.obj-4f5f500556d4efd82f9ad5bfae1fe5fa.mesh" ]
+
+source_file="res://asset/mesh/kiri/flowers1.obj"
+dest_files=[ "res://.import/flowers1.obj-4f5f500556d4efd82f9ad5bfae1fe5fa.mesh", "res://.import/flowers1.obj-4f5f500556d4efd82f9ad5bfae1fe5fa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

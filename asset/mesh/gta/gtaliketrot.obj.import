@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gtaliketrot.obj-bc09dc9221148e4ca0b960d9b7d4a3da.mesh"
+
+[deps]
+
+files=[ "res://.import/gtaliketrot.obj-bc09dc9221148e4ca0b960d9b7d4a3da.mesh" ]
+
+source_file="res://asset/mesh/gta/gtaliketrot.obj"
+dest_files=[ "res://.import/gtaliketrot.obj-bc09dc9221148e4ca0b960d9b7d4a3da.mesh", "res://.import/gtaliketrot.obj-bc09dc9221148e4ca0b960d9b7d4a3da.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

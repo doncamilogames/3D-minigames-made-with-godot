@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/carroad1.obj-7c1121c6f87f03bf70fa2b0e98aa1abc.mesh"
+
+[deps]
+
+files=[ "res://.import/carroad1.obj-7c1121c6f87f03bf70fa2b0e98aa1abc.mesh" ]
+
+source_file="res://asset/mesh/tilemap/carroad1.obj"
+dest_files=[ "res://.import/carroad1.obj-7c1121c6f87f03bf70fa2b0e98aa1abc.mesh", "res://.import/carroad1.obj-7c1121c6f87f03bf70fa2b0e98aa1abc.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

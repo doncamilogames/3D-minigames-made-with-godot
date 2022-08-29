@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/monsteroftime/KinemonsterMESH.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/monsteroftime/npcmot.gd" type="Script" id=2]
+
+[sub_resource type="CylinderShape" id=1]
+height = 4.66467
+radius = 3.6316
+
+[sub_resource type="CylinderShape" id=2]
+height = 4.66467
+radius = 1.26937
+
+[sub_resource type="CylinderShape" id=3]
+height = 31.725
+radius = 21.9769
+
+[sub_resource type="CapsuleShape" id=4]
+radius = 0.429224
+height = 2.16268
+
+[node name="npcmot" type="KinematicBody"]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource( 2 )
+
+[node name="mesh" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0 )
+
+[node name="close" type="Area" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="close"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68564, 0 )
+shape = SubResource( 1 )
+
+[node name="tooclose" type="Area" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="tooclose"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68564, 0 )
+shape = SubResource( 2 )
+
+[node name="far" type="Area" parent="."]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape" type="CollisionShape" parent="far"]
+shape = SubResource( 3 )
+
+[node name="targetpos" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55086, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.48717, 0 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="tooclose" to="." method="_on_tooclose_body_entered"]
+[connection signal="body_exited" from="tooclose" to="." method="_on_tooclose_body_exited"]

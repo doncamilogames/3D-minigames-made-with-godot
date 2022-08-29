@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/kinematic/meshnpc.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/kinematic/npcgta.gd" type="Script" id=2]
+[ext_resource path="res://asset/sounds/tac1.wav" type="AudioStream" id=3]
+
+[sub_resource type="CylinderShape" id=4]
+height = 2.98668
+radius = 0.707169
+
+[node name="npcgta" type="KinematicBody" groups=["_npc", "npc"]]
+collision_layer = 5
+collision_mask = 5
+axis_lock_motion_y = true
+move_lock_y = true
+collision/safe_margin = 0.01
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57273, 0 )
+shape = SubResource( 4 )
+
+[node name="guncast" type="RayCast" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.78759, 0.0402837 )
+cast_to = Vector3( 0, 0, 30 )
+collision_mask = 7
+
+[node name="mesh" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0 )
+
+[node name="npc" type="Spatial" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="RayCast" type="RayCast" parent="npc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.445, 2.26256 )
+enabled = true
+collision_mask = 256
+
+[node name="GroundRay" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.205, 0 )
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+collision_mask = 256
+
+[node name="weaponsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

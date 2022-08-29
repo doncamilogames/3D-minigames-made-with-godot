@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tac1.wav-f0d2f17f6b83d9e4e77ef8d7cc433932.sample"
+
+[deps]
+
+source_file="res://asset/sounds/tac1.wav"
+dest_files=[ "res://.import/tac1.wav-f0d2f17f6b83d9e4e77ef8d7cc433932.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

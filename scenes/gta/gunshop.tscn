@@ -1,0 +1,506 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://asset/textures/barwh.png" type="Texture" id=1]
+[ext_resource path="res://asset/textures/32text/32glass.png" type="Texture" id=2]
+[ext_resource path="res://asset/textures/black1.png" type="Texture" id=3]
+[ext_resource path="res://asset/fonts/new_theme.tres" type="Theme" id=4]
+[ext_resource path="res://asset/textures/hudmenu/bg1.png" type="Texture" id=5]
+[ext_resource path="res://scenes/gta/objects/guninshop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/gta/door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/kinematic/Kinemacron.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/gta/interiors.gd" type="Script" id=9]
+[ext_resource path="res://scenes/gta/text.gd" type="Script" id=10]
+[ext_resource path="res://asset/textures/gta/hand1.png" type="Texture" id=11]
+[ext_resource path="res://asset/sounds/hh.ogg" type="AudioStream" id=12]
+[ext_resource path="res://asset/textures/32text/32templewall22.png" type="Texture" id=13]
+[ext_resource path="res://asset/materials/mot/woodgold2real.tres" type="Material" id=14]
+[ext_resource path="res://scenes/kinematic/tile/trot.tres" type="Material" id=15]
+[ext_resource path="res://scenes/kinematic/tile/wall4.tres" type="Material" id=16]
+[ext_resource path="res://scenes/kinematic/tile/door1.tres" type="Material" id=17]
+[ext_resource path="res://scenes/kinematic/tile/signgun.tres" type="Material" id=18]
+[ext_resource path="res://scenes/kinematic/tile/chair1.tres" type="Material" id=19]
+[ext_resource path="res://asset/textures/gta/bararmor.png" type="Texture" id=20]
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.956863, 0.341176, 0.341176, 1 )
+albedo_texture = ExtResource( 13 )
+metallic_specular = 0.0
+
+[sub_resource type="ArrayMesh" id=1]
+surfaces/0 = {
+"aabb": AABB( -8, -1e-06, -8, 12.48, 1.72001, 16 ),
+"array_data": PoolByteArray( 92, 143, 226, 63, 237, 40, 220, 63, 0, 0, 0, 65, 127, 0, 0, 193, 0, 64, 6, 195, 0, 224, 15, 193, 92, 143, 226, 63, 189, 55, 134, 181, 123, 20, 174, 64, 127, 0, 0, 193, 0, 192, 7, 195, 0, 0, 0, 193, 92, 143, 226, 63, 189, 55, 134, 181, 0, 0, 0, 65, 127, 0, 0, 193, 0, 64, 6, 195, 0, 0, 0, 193, 92, 143, 226, 63, 237, 40, 220, 63, 125, 20, 174, 64, 127, 0, 0, 193, 0, 192, 7, 195, 0, 224, 15, 193, 0, 0, 0, 193, 237, 40, 220, 63, 125, 20, 174, 64, 127, 127, 127, 193, 0, 0, 15, 195, 0, 224, 15, 193, 92, 143, 226, 63, 189, 55, 134, 181, 123, 20, 174, 64, 127, 127, 127, 193, 0, 64, 9, 195, 0, 0, 0, 193, 92, 143, 226, 63, 237, 40, 220, 63, 125, 20, 174, 64, 127, 127, 127, 193, 0, 64, 9, 195, 0, 224, 15, 193, 0, 0, 0, 193, 189, 55, 134, 181, 123, 20, 174, 64, 127, 127, 127, 193, 0, 0, 15, 195, 0, 0, 0, 193, 143, 194, 245, 63, 189, 55, 134, 181, 205, 204, 124, 64, 0, 0, 127, 63, 0, 0, 15, 195, 0, 0, 0, 193, 41, 92, 143, 64, 237, 40, 220, 63, 205, 204, 124, 64, 0, 0, 127, 63, 0, 128, 13, 195, 0, 224, 15, 193, 41, 92, 143, 64, 189, 55, 134, 181, 205, 204, 124, 64, 0, 0, 127, 63, 0, 128, 13, 195, 0, 0, 0, 193, 143, 194, 245, 63, 237, 40, 220, 63, 205, 204, 124, 64, 0, 0, 127, 63, 0, 0, 15, 195, 0, 224, 15, 193, 41, 92, 143, 64, 189, 55, 134, 53, 205, 204, 124, 192, 127, 0, 126, 127, 0, 64, 6, 195, 0, 0, 0, 193, 41, 92, 143, 64, 237, 40, 220, 63, 205, 204, 124, 64, 127, 0, 126, 127, 0, 224, 10, 195, 0, 224, 15, 193, 41, 92, 143, 64, 254, 40, 220, 63, 205, 204, 124, 192, 127, 0, 126, 127, 0, 64, 6, 195, 0, 224, 15, 193, 41, 92, 143, 64, 189, 55, 134, 181, 205, 204, 124, 64, 127, 0, 126, 127, 0, 224, 10, 195, 0, 0, 0, 193, 143, 194, 245, 63, 254, 40, 220, 63, 205, 204, 124, 192, 127, 127, 127, 193, 0, 192, 7, 195, 0, 224, 15, 193, 41, 92, 143, 64, 189, 55, 134, 53, 205, 204, 124, 192, 127, 127, 127, 193, 0, 64, 6, 195, 0, 0, 0, 193, 41, 92, 143, 64, 254, 40, 220, 63, 205, 204, 124, 192, 127, 127, 127, 193, 0, 64, 6, 195, 0, 224, 15, 193, 143, 194, 245, 63, 189, 55, 134, 53, 205, 204, 124, 192, 127, 127, 127, 193, 0, 192, 7, 195, 0, 0, 0, 193, 143, 194, 245, 63, 254, 40, 220, 63, 205, 204, 124, 192, 129, 0, 126, 129, 0, 192, 7, 195, 0, 224, 15, 193, 143, 194, 245, 63, 189, 55, 134, 181, 205, 204, 124, 64, 129, 0, 126, 129, 0, 96, 12, 195, 0, 0, 0, 193, 143, 194, 245, 63, 189, 55, 134, 53, 205, 204, 124, 192, 129, 0, 126, 129, 0, 192, 7, 195, 0, 0, 0, 193, 143, 194, 245, 63, 237, 40, 220, 63, 205, 204, 124, 64, 129, 0, 126, 129, 0, 96, 12, 195, 0, 224, 15, 193, 0, 0, 0, 193, 189, 55, 134, 53, 123, 20, 174, 192, 0, 0, 127, 63, 0, 0, 15, 195, 0, 0, 0, 193, 92, 143, 226, 63, 254, 40, 220, 63, 123, 20, 174, 192, 0, 0, 127, 63, 0, 64, 9, 195, 0, 224, 15, 193, 92, 143, 226, 63, 189, 55, 134, 53, 123, 20, 174, 192, 0, 0, 127, 63, 0, 64, 9, 195, 0, 0, 0, 193, 0, 0, 0, 193, 254, 40, 220, 63, 123, 20, 174, 192, 0, 0, 127, 63, 0, 0, 15, 195, 0, 224, 15, 193, 92, 143, 226, 63, 189, 55, 134, 53, 0, 0, 0, 193, 127, 0, 127, 127, 0, 64, 6, 195, 0, 0, 0, 193, 92, 143, 226, 63, 254, 40, 220, 63, 123, 20, 174, 192, 127, 0, 127, 127, 0, 192, 7, 195, 0, 224, 15, 193, 92, 143, 226, 63, 254, 40, 220, 63, 0, 0, 0, 193, 127, 0, 127, 127, 0, 64, 6, 195, 0, 224, 15, 193, 92, 143, 226, 63, 189, 55, 134, 53, 123, 20, 174, 192, 127, 0, 127, 127, 0, 192, 7, 195, 0, 0, 0, 193 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0, 12, 0, 13, 0, 14, 0, 13, 0, 12, 0, 15, 0, 16, 0, 17, 0, 18, 0, 17, 0, 16, 0, 19, 0, 20, 0, 21, 0, 22, 0, 21, 0, 20, 0, 23, 0, 24, 0, 25, 0, 26, 0, 25, 0, 24, 0, 27, 0, 28, 0, 29, 0, 30, 0, 29, 0, 28, 0, 31, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 48,
+"material": ExtResource( 14 ),
+"name": "_59",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 32
+}
+surfaces/1 = {
+"aabb": AABB( -8, 1.72, -8, 12.48, 1.00136e-05, 16 ),
+"array_data": PoolByteArray( 92, 143, 226, 63, 237, 40, 220, 63, 0, 0, 0, 65, 0, 127, 127, 129, 0, 0, 27, 195, 0, 160, 120, 66, 0, 0, 0, 193, 237, 40, 220, 63, 125, 20, 174, 64, 0, 127, 127, 129, 0, 0, 26, 195, 0, 0, 132, 66, 92, 143, 226, 63, 237, 40, 220, 63, 125, 20, 174, 64, 0, 127, 127, 129, 0, 0, 26, 195, 0, 160, 120, 66, 0, 0, 0, 193, 237, 40, 220, 63, 0, 0, 0, 65, 0, 127, 127, 129, 0, 0, 27, 195, 0, 0, 132, 66, 143, 194, 245, 63, 254, 40, 220, 63, 205, 204, 124, 192, 0, 127, 129, 193, 0, 0, 26, 195, 0, 160, 123, 66, 41, 92, 143, 64, 237, 40, 220, 63, 205, 204, 124, 64, 0, 127, 129, 193, 0, 0, 27, 195, 0, 0, 132, 66, 143, 194, 245, 63, 237, 40, 220, 63, 205, 204, 124, 64, 0, 127, 129, 193, 0, 0, 26, 195, 0, 0, 132, 66, 41, 92, 143, 64, 254, 40, 220, 63, 205, 204, 124, 192, 0, 127, 129, 193, 0, 0, 27, 195, 0, 160, 123, 66, 0, 0, 0, 193, 254, 40, 220, 63, 0, 0, 0, 193, 0, 127, 0, 63, 0, 0, 27, 195, 0, 0, 132, 66, 92, 143, 226, 63, 254, 40, 220, 63, 123, 20, 174, 192, 0, 127, 0, 63, 0, 0, 26, 195, 0, 160, 120, 66, 0, 0, 0, 193, 254, 40, 220, 63, 123, 20, 174, 192, 0, 127, 0, 63, 0, 0, 26, 195, 0, 0, 132, 66, 92, 143, 226, 63, 254, 40, 220, 63, 0, 0, 0, 193, 0, 127, 0, 63, 0, 0, 27, 195, 0, 160, 120, 66 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 18,
+"material": SubResource( 8 ),
+"name": "_61",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 12
+}
+surfaces/2 = {
+"aabb": AABB( -8, -1e-06, -8, 16, 8.16, 16 ),
+"array_data": PoolByteArray( 0, 0, 0, 65, 189, 55, 134, 181, 0, 0, 0, 65, 127, 127, 129, 63, 0, 0, 192, 193, 0, 0, 128, 63, 0, 0, 0, 193, 91, 143, 2, 65, 1, 0, 0, 65, 127, 127, 129, 63, 0, 0, 176, 193, 0, 192, 163, 188, 0, 0, 0, 193, 189, 55, 134, 181, 0, 0, 0, 65, 127, 127, 129, 63, 0, 0, 176, 193, 0, 0, 128, 63, 0, 0, 0, 65, 91, 143, 2, 65, 1, 0, 0, 65, 127, 127, 129, 63, 0, 0, 192, 193, 0, 192, 163, 188, 0, 0, 0, 193, 189, 55, 134, 53, 0, 0, 0, 193, 127, 0, 126, 127, 0, 0, 160, 193, 0, 0, 128, 63, 0, 0, 0, 193, 91, 143, 2, 65, 1, 0, 0, 65, 127, 0, 126, 127, 0, 0, 176, 193, 0, 192, 163, 188, 0, 0, 0, 193, 93, 143, 2, 65, 254, 255, 255, 192, 127, 0, 126, 127, 0, 0, 160, 193, 0, 192, 163, 188, 0, 0, 0, 193, 189, 55, 134, 181, 0, 0, 0, 65, 127, 0, 126, 127, 0, 0, 176, 193, 0, 0, 128, 63, 0, 0, 0, 65, 93, 143, 2, 65, 254, 255, 255, 192, 129, 0, 0, 63, 0, 0, 144, 193, 0, 192, 163, 188, 0, 0, 0, 65, 189, 55, 134, 181, 0, 0, 0, 65, 129, 0, 0, 63, 0, 0, 128, 193, 0, 0, 128, 63, 0, 0, 0, 65, 189, 55, 134, 53, 0, 0, 0, 193, 129, 0, 0, 63, 0, 0, 144, 193, 0, 0, 128, 63, 0, 0, 0, 65, 91, 143, 2, 65, 1, 0, 0, 65, 129, 0, 0, 63, 0, 0, 128, 193, 0, 192, 163, 188, 0, 0, 0, 193, 189, 55, 134, 53, 0, 0, 0, 193, 0, 0, 127, 63, 0, 0, 160, 193, 0, 0, 128, 63, 0, 0, 0, 65, 93, 143, 2, 65, 254, 255, 255, 192, 0, 0, 127, 63, 0, 0, 144, 193, 0, 192, 163, 188, 0, 0, 0, 65, 189, 55, 134, 53, 0, 0, 0, 193, 0, 0, 127, 63, 0, 0, 144, 193, 0, 0, 128, 63, 0, 0, 0, 193, 93, 143, 2, 65, 254, 255, 255, 192, 0, 0, 127, 63, 0, 0, 160, 193, 0, 192, 163, 188 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0, 12, 0, 13, 0, 14, 0, 13, 0, 12, 0, 15, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 24,
+"material": ExtResource( 16 ),
+"name": "_7",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 16
+}
+surfaces/3 = {
+"aabb": AABB( -8, -1e-06, -8, 16, 8.16001, 16 ),
+"array_data": PoolByteArray( 0, 0, 0, 65, 93, 143, 2, 65, 254, 255, 255, 192, 0, 129, 0, 63, 0, 0, 224, 64, 0, 0, 68, 195, 0, 0, 0, 193, 91, 143, 2, 65, 1, 0, 0, 65, 0, 129, 0, 63, 0, 224, 31, 65, 0, 0, 71, 195, 0, 0, 0, 65, 91, 143, 2, 65, 1, 0, 0, 65, 0, 129, 0, 63, 0, 224, 31, 65, 0, 0, 68, 195, 0, 0, 0, 193, 93, 143, 2, 65, 254, 255, 255, 192, 0, 129, 0, 63, 0, 0, 224, 64, 0, 0, 71, 195, 0, 0, 0, 193, 189, 55, 134, 53, 0, 0, 0, 193, 0, 127, 0, 63, 0, 0, 224, 64, 0, 160, 128, 191, 0, 0, 0, 65, 189, 55, 134, 181, 0, 0, 0, 65, 0, 127, 0, 63, 0, 224, 31, 65, 0, 0, 128, 192, 0, 0, 0, 193, 189, 55, 134, 181, 0, 0, 0, 65, 0, 127, 0, 63, 0, 224, 31, 65, 0, 160, 128, 191, 0, 0, 0, 65, 189, 55, 134, 53, 0, 0, 0, 193, 0, 127, 0, 63, 0, 0, 224, 64, 0, 0, 128, 192 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 12,
+"material": ExtResource( 15 ),
+"name": "_26",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 8
+}
+surfaces/4 = {
+"aabb": AABB( 7.65, 3.48495, -7.81786, 1.00136e-05, 4.34, 15.8179 ),
+"array_data": PoolByteArray( 205, 204, 244, 64, 104, 9, 95, 64, 1, 0, 0, 65, 129, 0, 0, 63, 0, 0, 241, 195, 0, 0, 128, 191, 205, 204, 244, 64, 254, 101, 250, 64, 218, 30, 133, 62, 129, 0, 0, 63, 0, 128, 241, 195, 0, 0, 0, 192, 205, 204, 244, 64, 251, 101, 250, 64, 1, 0, 0, 65, 129, 0, 0, 63, 0, 0, 241, 195, 0, 0, 0, 192, 205, 204, 244, 64, 108, 9, 95, 64, 218, 30, 133, 62, 129, 0, 0, 63, 0, 128, 241, 195, 0, 0, 128, 191, 205, 204, 244, 64, 108, 9, 95, 64, 4, 116, 159, 189, 129, 0, 0, 63, 0, 0, 241, 195, 0, 0, 128, 191, 205, 204, 244, 64, 2, 102, 250, 64, 231, 43, 250, 192, 129, 0, 0, 63, 0, 128, 241, 195, 0, 0, 0, 192, 205, 204, 244, 64, 254, 101, 250, 64, 4, 116, 159, 189, 129, 0, 0, 63, 0, 0, 241, 195, 0, 0, 0, 192, 205, 204, 244, 64, 112, 9, 95, 64, 233, 43, 250, 192, 129, 0, 0, 63, 0, 128, 241, 195, 0, 0, 128, 191 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 12,
+"material": ExtResource( 18 ),
+"name": "_31",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 8
+}
+surfaces/5 = {
+"aabb": AABB( -7.95, -1e-06, -3.59405, 1.00136e-05, 7.01869, 6.91465 ),
+"array_data": PoolByteArray( 102, 102, 254, 192, 189, 55, 134, 181, 140, 132, 84, 64, 127, 0, 126, 127, 0, 0, 248, 193, 0, 0, 64, 192, 102, 102, 254, 192, 30, 153, 224, 64, 230, 4, 102, 192, 127, 0, 126, 127, 0, 160, 231, 193, 0, 0, 128, 192, 102, 102, 254, 192, 189, 55, 134, 53, 234, 4, 102, 192, 127, 0, 126, 127, 0, 160, 231, 193, 0, 0, 64, 192, 102, 102, 254, 192, 28, 153, 224, 64, 144, 132, 84, 64, 127, 0, 126, 127, 0, 0, 248, 193, 0, 0, 128, 192 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 6,
+"material": ExtResource( 17 ),
+"name": "_23",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 1.77, 1.72, 8, 1.77, 0, 5.44, 1.77, 0, 8, 1.77, 0, 5.44, 1.77, 1.72, 8, 1.77, 1.72, 5.44, -8, 1.72, 5.44, 1.77, 0, 5.44, 1.77, 1.72, 5.44, 1.77, 0, 5.44, -8, 1.72, 5.44, -8, 0, 5.44, 1.92, 0, 3.95, 4.48, 1.72, 3.95, 4.48, 0, 3.95, 4.48, 1.72, 3.95, 1.92, 0, 3.95, 1.92, 1.72, 3.95, 4.48, 0, -3.95, 4.48, 1.72, 3.95, 4.48, 1.72, -3.95, 4.48, 1.72, 3.95, 4.48, 0, -3.95, 4.48, 0, 3.95, 1.92, 1.72, -3.95, 4.48, 0, -3.95, 4.48, 1.72, -3.95, 4.48, 0, -3.95, 1.92, 1.72, -3.95, 1.92, 0, -3.95, 1.92, 1.72, -3.95, 1.92, 0, 3.95, 1.92, 0, -3.95, 1.92, 0, 3.95, 1.92, 1.72, -3.95, 1.92, 1.72, 3.95, -8, 0, -5.44, 1.77, 1.72, -5.44, 1.77, 0, -5.44, 1.77, 1.72, -5.44, -8, 0, -5.44, -8, 1.72, -5.44, 1.77, 0, -8, 1.77, 1.72, -5.44, 1.77, 1.72, -8, 1.77, 1.72, -5.44, 1.77, 0, -8, 1.77, 0, -5.44, 1.77, 1.72, 8, -8, 1.72, 5.44, 1.77, 1.72, 5.44, -8, 1.72, 5.44, 1.77, 1.72, 8, -8, 1.72, 8, 1.92, 1.72, -3.95, 4.48, 1.72, 3.95, 1.92, 1.72, 3.95, 4.48, 1.72, 3.95, 1.92, 1.72, -3.95, 4.48, 1.72, -3.95, -8, 1.72, -8, 1.77, 1.72, -5.44, -8, 1.72, -5.44, 1.77, 1.72, -5.44, -8, 1.72, -8, 1.77, 1.72, -8, 8, 0, 8, -8, 8.16, 8, -8, 0, 8, -8, 8.16, 8, 8, 0, 8, 8, 8.16, 8, -8, 0, -8, -8, 8.16, 8, -8, 8.16, -8, -8, 8.16, 8, -8, 0, -8, -8, 0, 8, 8, 8.16, -8, 8, 0, 8, 8, 0, -8, 8, 0, 8, 8, 8.16, -8, 8, 8.16, 8, -8, 0, -8, 8, 8.16, -8, 8, 0, -8, 8, 8.16, -8, -8, 0, -8, -8, 8.16, -8, 8, 8.16, -8, -8, 8.16, 8, 8, 8.16, 8, -8, 8.16, 8, 8, 8.16, -8, -8, 8.16, -8, -8, 0, -8, 8, 0, 8, -8, 0, 8, 8, 0, 8, -8, 0, -8, 8, 0, -8, 7.65, 3.4849, 8, 7.65, 7.825, 0.26, 7.65, 7.8249, 8, 7.65, 7.825, 0.26, 7.65, 3.4849, 8, 7.65, 3.485, 0.26, 7.65, 3.485, -0.0779, 7.65, 7.825, -7.8179, 7.65, 7.825, -0.0779, 7.65, 7.825, -7.8179, 7.65, 3.485, -0.0779, 7.65, 3.485, -7.8179, -7.95, 0, 3.3206, -7.95, 7.0187, -3.594, -7.95, 0, -3.5941, -7.95, 7.0187, -3.594, -7.95, 0, 3.3206, -7.95, 7.0187, 3.3206 )
+
+[sub_resource type="ArrayMesh" id=6]
+surfaces/0 = {
+"aabb": AABB( -0.4828, 0, -0.4828, 0.96561, 1.45622, 0.96561 ),
+"array_data": PoolByteArray( 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 62, 127, 0, 127, 127, 0, 0, 138, 66, 0, 192, 71, 191, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 190, 127, 0, 127, 127, 0, 0, 140, 66, 0, 224, 217, 188, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 62, 127, 0, 127, 127, 0, 0, 138, 66, 0, 224, 217, 188, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 190, 127, 0, 127, 127, 0, 0, 140, 66, 0, 192, 71, 191, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 142, 66, 0, 192, 71, 191, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 140, 66, 0, 224, 217, 188, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 140, 66, 0, 192, 71, 191, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 190, 127, 127, 129, 63, 0, 0, 142, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 190, 129, 0, 0, 63, 0, 0, 142, 66, 0, 192, 71, 191, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 62, 129, 0, 0, 63, 0, 0, 144, 66, 0, 224, 217, 188, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 190, 129, 0, 0, 63, 0, 0, 142, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 62, 129, 0, 0, 63, 0, 0, 144, 66, 0, 192, 71, 191, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 146, 66, 0, 192, 71, 191, 144, 49, 247, 190, 0, 0, 0, 0, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 144, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 144, 66, 0, 192, 71, 191, 144, 49, 247, 62, 0, 0, 0, 0, 144, 49, 247, 62, 0, 0, 127, 63, 0, 0, 146, 66, 0, 224, 217, 188, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 190, 0, 127, 0, 63, 0, 64, 142, 66, 0, 192, 71, 191, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 62, 0, 127, 0, 63, 0, 0, 144, 66, 0, 96, 121, 191, 144, 49, 247, 190, 23, 101, 186, 63, 144, 49, 247, 62, 0, 127, 0, 63, 0, 0, 144, 66, 0, 192, 71, 191, 144, 49, 247, 62, 23, 101, 186, 63, 144, 49, 247, 190, 0, 127, 0, 63, 0, 64, 142, 66, 0, 96, 121, 191 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0, 12, 0, 13, 0, 14, 0, 13, 0, 12, 0, 15, 0, 16, 0, 17, 0, 18, 0, 17, 0, 16, 0, 19, 0 ),
+"blend_shape_data": [  ],
+"format": 2186519,
+"index_count": 30,
+"material": ExtResource( 19 ),
+"name": "_56",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 20
+}
+
+[sub_resource type="ConvexPolygonShape" id=7]
+points = PoolVector3Array( -0.4828, 0, -0.4828, -0.4828, 0, 0.4828, -0.4828, 1.45621, -0.4828, 0.4828, 0, -0.4828, 0.4828, 0, 0.4828, -0.4828, 1.45621, 0.4828, 0.4828, 1.45621, -0.4828, 0.4828, 1.45621, 0.4828 )
+
+[sub_resource type="Environment" id=3]
+background_mode = 1
+background_energy = 0.0
+ambient_light_color = Color( 1, 0.945098, 0.823529, 1 )
+ambient_light_sky_contribution = 0.0
+adjustment_enabled = true
+
+[sub_resource type="Animation" id=4]
+resource_name = "load"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Anim"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06253, 0.215505 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0, 0, 0 ), Color( 0.290196, 0, 0, 0.788235 ), Color( 0.290196, 0, 0, 0 ) ]
+}
+
+[node name="gunshop" type="Spatial"]
+script = ExtResource( 9 )
+
+[node name="house" type="StaticBody" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="house"]
+mesh = SubResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="house"]
+shape = SubResource( 2 )
+
+[node name="Spatial" type="Spatial" parent="house"]
+
+[node name="Spatial" type="Spatial" parent="house/Spatial"]
+
+[node name="door" parent="house/Spatial/Spatial" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32255, 0, 0.0959271 )
+_scene = "res://scenes/gta/town.tscn"
+_spawn = "global"
+_mode = "all"
+
+[node name="chair2" type="StaticBody" parent="house" groups=["breakable"]]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.21529, 0, 0.142089 )
+collision_layer = 7
+collision_mask = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chair" type="MeshInstance" parent="house/chair2"]
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="house/chair2"]
+shape = SubResource( 7 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -10.488
+pitch_scale = 0.7
+autoplay = true
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+
+[node name="Kinemacron" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.999625, 0, -0.0273982, 0, 1, 0, 0.0273982, 0, -0.999625, -0.551989, 0, 6.53123 )
+
+[node name="cutscene" type="Spatial" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="text" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 10 )
+
+[node name="bg" type="Sprite" parent="text"]
+visible = false
+self_modulate = Color( 0.282353, 0.454902, 0.243137, 0.752941 )
+position = Vector2( 190, 460 )
+scale = Vector2( 20.2188, 4.0625 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Label" type="Label" parent="text"]
+margin_left = 242.0
+margin_top = 473.0
+margin_right = 617.0
+margin_bottom = 540.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "So... 
+
+It's the first time you come to the Town ?"
+autowrap = true
+clip_text = true
+percent_visible = 0.0
+
+[node name="shopdesc" type="Label" parent="text"]
+visible = false
+margin_left = 215.0
+margin_top = 458.0
+margin_right = 799.0
+margin_bottom = 557.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "A gun"
+autowrap = true
+clip_text = true
+
+[node name="shopprice" type="Label" parent="text"]
+visible = false
+margin_left = 242.0
+margin_top = 525.0
+margin_right = 617.0
+margin_bottom = 564.0
+rect_scale = Vector2( 1.5, 1.5 )
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 0.843137, 0, 1 )
+text = "100 $"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="voice" type="AudioStreamPlayer" parent="text"]
+volume_db = -6.0
+pitch_scale = 1.5
+
+[node name="textspeed" type="Timer" parent="."]
+wait_time = 0.07
+one_shot = true
+
+[node name="loading" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 514.5, 303.5 )
+scale = Vector2( 52.45, 31.35 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="loading"]
+margin_left = -9.0
+margin_top = -3.0
+margin_right = 110.0
+margin_bottom = 37.0
+rect_scale = Vector2( 0.15, 0.2 )
+theme = ExtResource( 4 )
+text = "Loading"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="loading"]
+playback_speed = 0.5
+anims/load = SubResource( 4 )
+
+[node name="Camera" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.6161, 0.0360856, 198.667 )
+
+[node name="Camera" type="Camera" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0 )
+current = true
+far = 80.0
+
+[node name="skip" type="Button" parent="."]
+visible = false
+margin_left = 805.0
+margin_right = 1021.0
+margin_bottom = 40.0
+theme = ExtResource( 4 )
+text = "Skip Cutscene"
+
+[node name="spawnpoint" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438836, 0.136603, 6.38206 )
+
+[node name="hud" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -363, 191 )
+
+[node name="life" type="Sprite" parent="hud"]
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 888, 4 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/life"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/life"]
+self_modulate = Color( 1, 0, 0, 1 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="armor" type="Sprite" parent="hud/life"]
+self_modulate = Color( 0, 0.0862745, 1, 0.682353 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 20 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/life"]
+self_modulate = Color( 1, 1, 1, 0.462745 )
+margin_left = 18.0087
+margin_top = -1.64706
+margin_right = 103.009
+margin_bottom = 22.3529
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.686275, 0.686275, 0.686275, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Life"
+
+[node name="crime" type="Sprite" parent="hud"]
+self_modulate = Color( 0.262745, 0.262745, 0.262745, 1 )
+position = Vector2( 888, 45 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bg" type="Sprite" parent="hud/crime"]
+self_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+show_behind_parent = true
+position = Vector2( -2.5, -1.99999 )
+scale = Vector2( 1.1, 1.28125 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="bar" type="Sprite" parent="hud/crime"]
+self_modulate = Color( 0.0980392, 0.215686, 1, 1 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Label" type="Label" parent="hud/crime"]
+self_modulate = Color( 1, 1, 1, 0.443137 )
+margin_top = -2.0
+margin_right = 128.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.784314, 0.705882, 0.188235, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Crime"
+align = 1
+valign = 1
+
+[node name="weapon" type="Control" parent="hud"]
+margin_left = 900.0
+margin_top = 300.0
+margin_right = 900.0
+margin_bottom = 300.0
+rect_scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="icon" type="Sprite" parent="hud/weapon"]
+texture = ExtResource( 11 )
+centered = false
+
+[node name="ammo" type="Label" parent="hud/weapon"]
+visible = false
+margin_left = -22.0
+margin_top = 45.6667
+margin_right = 41.0
+margin_bottom = 71.6667
+theme = ExtResource( 4 )
+text = "20"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="timeleft" type="Label" parent="hud"]
+visible = false
+margin_left = 768.0
+margin_top = 55.0
+margin_right = 1010.0
+margin_bottom = 79.0
+theme = ExtResource( 4 )
+text = "Time left : 00:00"
+
+[node name="cash" type="Label" parent="hud"]
+margin_left = 717.0
+margin_top = 4.0
+margin_right = 845.0
+margin_bottom = 28.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.54902, 0.768627, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "100"
+align = 2
+valign = 1
+
+[node name="touched" type="Sprite" parent="hud"]
+self_modulate = Color( 0.290196, 0, 0, 0 )
+position = Vector2( 513, 311.5 )
+scale = Vector2( 32.5, 20.7813 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hud/touched"]
+anims/Anim = SubResource( 5 )
+
+[node name="cash2" type="Label" parent="hud"]
+margin_left = 762.0
+margin_top = 3.0
+margin_right = 873.0
+margin_bottom = 27.0
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.54902, 0.768627, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "$"
+align = 2
+valign = 1
+
+[node name="guninshop" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.40996, 1.82913, 4.31627 )
+_kind = "Gun"
+
+[node name="guninshop2" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.40996, 1.82913, 1.41262 )
+_kind = "Gun bullets"
+
+[node name="guninshop3" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.12523, 1.82913, 1.41262 )
+_kind = "Machine Gun bullets"
+
+[node name="guninshop4" parent="." instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.12523, 1.82913, 4.20776 )
+_kind = "Machine Gun"
+
+[node name="guninshop5" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61587, 1.82913, -2.48156 )
+_kind = "Bat"
+
+[node name="guninshop6" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1035, 1.82913, -2.48156 )
+_kind = "Armor"
+
+[connection signal="timeout" from="textspeed" to="." method="_on_textspeed_timeout"]

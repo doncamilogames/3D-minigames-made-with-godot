@@ -1,0 +1,9 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://asset/textures/32text/32stonefloor3.png" type="Texture" id=1]
+
+[resource]
+resource_name = "floorgold"
+albedo_color = Color( 0.717647, 0.580392, 0.215686, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0

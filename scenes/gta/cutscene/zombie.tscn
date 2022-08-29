@@ -1,0 +1,184 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/gta/npcgtafps.tscn" type="PackedScene" id=1]
+
+[node name="zombie" type="Spatial"]
+
+[node name="npcgtafps" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.500166, 0, 0.865929, 0, 1, 0, -0.865929, 0, 0.500166, 685.313, 0, 592.36 )
+
+[node name="npcgtafps2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.500166, 0, 0.865929, 0, 1, 0, -0.865929, 0, 0.500166, 681.845, 0, 584.417 )
+
+[node name="npcgtafps3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.500166, 0, 0.865929, 0, 1, 0, -0.865929, 0, 0.500166, 687.21, 0, 584.417 )
+
+[node name="npcgtafps4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.500166, 0, 0.865929, 0, 1, 0, -0.865929, 0, 0.500166, 687.21, 0, 590.25 )
+
+[node name="npcgtafps5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.500166, 0, 0.865929, 0, 1, 0, -0.865929, 0, 0.500166, 697.817, 0, 590.25 )
+
+[node name="npcgtafps46" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0523708, 0, 0.998628, 0, 1, 0, -0.998628, 0, -0.0523708, 694.629, 0, 593.155 )
+
+[node name="npcgtafps47" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0523708, 0, 0.998628, 0, 1, 0, -0.998628, 0, -0.0523708, 687.393, 0, 588.385 )
+
+[node name="npcgtafps48" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0523708, 0, 0.998628, 0, 1, 0, -0.998628, 0, -0.0523708, 691.893, 0, 585.461 )
+
+[node name="npcgtafps49" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0523708, 0, 0.998628, 0, 1, 0, -0.998628, 0, -0.0523708, 695.07, 0, 590.352 )
+
+[node name="npcgtafps50" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.0523708, 0, 0.998628, 0, 1, 0, -0.998628, 0, -0.0523708, 703.964, 0, 584.573 )
+
+[node name="npcgtafps6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.500166, 0, 0.865929, 0, 1, 0, -0.865929, 0, 0.500166, 683.232, 0, 597.352 )
+
+[node name="npcgtafps7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 718.082, 0, 570.763 )
+
+[node name="npcgtafps8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 720.528, 0, 575.539 )
+
+[node name="npcgtafps9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 715.337, 0, 578.198 )
+
+[node name="npcgtafps10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 720.171, 0, 587.639 )
+
+[node name="npcgtafps11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 707.202, 0, 577.894 )
+
+[node name="npcgtafps12" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 712.927, 0, 515.281 )
+
+[node name="npcgtafps13" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 715.373, 0, 520.057 )
+
+[node name="npcgtafps14" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 710.181, 0, 522.715 )
+
+[node name="npcgtafps15" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 715.016, 0, 532.156 )
+
+[node name="npcgtafps16" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 713.231, 0, 555.649 )
+
+[node name="npcgtafps37" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 716.015, 0, 585.91 )
+
+[node name="npcgtafps38" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 718.461, 0, 590.686 )
+
+[node name="npcgtafps39" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 713.27, 0, 593.345 )
+
+[node name="npcgtafps40" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 718.104, 0, 602.786 )
+
+[node name="npcgtafps41" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 710.86, 0, 530.428 )
+
+[node name="npcgtafps42" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 713.306, 0, 535.204 )
+
+[node name="npcgtafps43" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 708.115, 0, 537.862 )
+
+[node name="npcgtafps44" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 712.949, 0, 547.303 )
+
+[node name="npcgtafps45" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.998723, 0, -0.0505233, 0, 1, 0, 0.0505233, 0, 0.998723, 711.164, 0, 570.796 )
+
+[node name="npcgtafps17" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 728.638, 0, 508.345 )
+
+[node name="npcgtafps18" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 791.506, 0, 509.202 )
+
+[node name="npcgtafps19" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 786.934, 0, 512.011 )
+
+[node name="npcgtafps20" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 783.882, 0, 507.041 )
+
+[node name="npcgtafps21" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 774.844, 0, 512.592 )
+
+[node name="npcgtafps23" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 824.103, 0, 509.202 )
+
+[node name="npcgtafps24" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 819.531, 0, 512.011 )
+
+[node name="npcgtafps25" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 816.479, 0, 507.041 )
+
+[node name="npcgtafps26" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 807.441, 0, 512.592 )
+
+[node name="npcgtafps22" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 751.283, 0, 512.632 )
+
+[node name="npcgtafps27" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 703.156, 0, 508.345 )
+
+[node name="npcgtafps28" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 766.024, 0, 509.202 )
+
+[node name="npcgtafps29" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 761.452, 0, 512.011 )
+
+[node name="npcgtafps30" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 758.399, 0, 507.041 )
+
+[node name="npcgtafps51" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.372777, 0, -0.927921, 0, 1, 0, 0.927921, 0, 0.372777, 747.169, 0, 507.897 )
+
+[node name="npcgtafps52" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.372777, 0, -0.927921, 0, 1, 0, 0.927921, 0, 0.372777, 743.859, 0, 512.12 )
+
+[node name="npcgtafps53" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.372777, 0, -0.927921, 0, 1, 0, 0.927921, 0, 0.372777, 739.268, 0, 508.521 )
+
+[node name="npcgtafps54" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.497065, 0, -0.867714, 0, 1, 0, 0.867714, 0, 0.497065, 732.484, 0, 507.373 )
+
+[node name="npcgtafps55" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.497065, 0, -0.867714, 0, 1, 0, 0.867714, 0, 0.497065, 729.787, 0, 512.012 )
+
+[node name="npcgtafps56" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.497065, 0, -0.867714, 0, 1, 0, 0.867714, 0, 0.497065, 724.745, 0, 509.08 )
+
+[node name="npcgtafps57" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.497065, 0, -0.867714, 0, 1, 0, 0.867714, 0, 0.497065, 720.484, 0, 507.373 )
+
+[node name="npcgtafps58" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.497065, 0, -0.867714, 0, 1, 0, 0.867714, 0, 0.497065, 717.787, 0, 512.012 )
+
+[node name="npcgtafps59" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.497065, 0, -0.867714, 0, 1, 0, 0.867714, 0, 0.497065, 712.745, 0, 509.08 )
+
+[node name="npcgtafps31" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 749.362, 0, 512.592 )
+
+[node name="npcgtafps32" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 798.621, 0, 509.202 )
+
+[node name="npcgtafps33" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 794.049, 0, 512.011 )
+
+[node name="npcgtafps34" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 790.996, 0, 507.041 )
+
+[node name="npcgtafps35" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 781.958, 0, 512.592 )
+
+[node name="npcgtafps36" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.0269969, 0, -0.999636, 0, 1, 0, 0.999636, 0, 0.0269969, 725.8, 0, 512.632 )
+
+[node name="KineFPS" type="Sprite" parent="."]

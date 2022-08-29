@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/obstacle5.obj-86f7441504c221db8ef83356f2019148.mesh"
+
+[deps]
+
+files=[ "res://.import/obstacle5.obj-86f7441504c221db8ef83356f2019148.mesh" ]
+
+source_file="res://scenes/tube/obstacle5.obj"
+dest_files=[ "res://.import/obstacle5.obj-86f7441504c221db8ef83356f2019148.mesh", "res://.import/obstacle5.obj-86f7441504c221db8ef83356f2019148.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

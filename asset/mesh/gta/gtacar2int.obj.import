@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/gtacar2int.obj-f9c00597fe490423797ac212f5854013.mesh"
+
+[deps]
+
+files=[ "res://.import/gtacar2int.obj-f9c00597fe490423797ac212f5854013.mesh" ]
+
+source_file="res://asset/mesh/gta/gtacar2int.obj"
+dest_files=[ "res://.import/gtacar2int.obj-f9c00597fe490423797ac212f5854013.mesh", "res://.import/gtacar2int.obj-f9c00597fe490423797ac212f5854013.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

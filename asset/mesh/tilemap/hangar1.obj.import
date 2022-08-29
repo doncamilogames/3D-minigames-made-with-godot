@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hangar1.obj-483116add5b3b5561e523575d45bb306.mesh"
+
+[deps]
+
+files=[ "res://.import/hangar1.obj-483116add5b3b5561e523575d45bb306.mesh" ]
+
+source_file="res://asset/mesh/tilemap/hangar1.obj"
+dest_files=[ "res://.import/hangar1.obj-483116add5b3b5561e523575d45bb306.mesh", "res://.import/hangar1.obj-483116add5b3b5561e523575d45bb306.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

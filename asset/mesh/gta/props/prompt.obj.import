@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/prompt.obj-78be863e09282188cd836875bd5c7d2d.mesh"
+
+[deps]
+
+files=[ "res://.import/prompt.obj-78be863e09282188cd836875bd5c7d2d.mesh" ]
+
+source_file="res://asset/mesh/gta/props/prompt.obj"
+dest_files=[ "res://.import/prompt.obj-78be863e09282188cd836875bd5c7d2d.mesh", "res://.import/prompt.obj-78be863e09282188cd836875bd5c7d2d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

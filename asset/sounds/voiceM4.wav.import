@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/voiceM4.wav-6dc1a994016a7c503482298d7e0e0af7.sample"
+
+[deps]
+
+source_file="res://asset/sounds/voiceM4.wav"
+dest_files=[ "res://.import/voiceM4.wav-6dc1a994016a7c503482298d7e0e0af7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

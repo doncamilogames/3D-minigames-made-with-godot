@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bed2.obj-3ce6a97779400d41eab82666547d215f.mesh"
+
+[deps]
+
+files=[ "res://.import/bed2.obj-3ce6a97779400d41eab82666547d215f.mesh" ]
+
+source_file="res://asset/mesh/mot/bed2.obj"
+dest_files=[ "res://.import/bed2.obj-3ce6a97779400d41eab82666547d215f.mesh", "res://.import/bed2.obj-3ce6a97779400d41eab82666547d215f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

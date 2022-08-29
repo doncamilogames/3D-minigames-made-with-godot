@@ -1,0 +1,22 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl cliffcave
+Ka 0.000000 0.000000 0.000000
+Kd 0.125490 0.129412 0.082353
+Ks 0.330000 0.330000 0.330000
+map_Kd forestcave/cliffcave.png
+
+newmtl _
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd forestcave/_.png
+
+newmtl earthcave
+Ka 0.000000 0.000000 0.000000
+Kd 0.074510 0.070588 0.039216
+Ks 0.330000 0.330000 0.330000
+map_Kd forestcave/earthcave.png
+

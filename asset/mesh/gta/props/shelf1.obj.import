@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/shelf1.obj-ede934a1ed724751bd1cde13b6f58569.mesh"
+
+[deps]
+
+files=[ "res://.import/shelf1.obj-ede934a1ed724751bd1cde13b6f58569.mesh" ]
+
+source_file="res://asset/mesh/gta/props/shelf1.obj"
+dest_files=[ "res://.import/shelf1.obj-ede934a1ed724751bd1cde13b6f58569.mesh", "res://.import/shelf1.obj-ede934a1ed724751bd1cde13b6f58569.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

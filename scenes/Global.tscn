@@ -1,0 +1,185 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Global.gd" type="Script" id=1]
+[ext_resource path="res://asset/fonts/new_theme.tres" type="Theme" id=2]
+[ext_resource path="res://asset/textures/hudmenu/bg1.png" type="Texture" id=3]
+
+[node name="Global" type="Node"]
+script = ExtResource( 1 )
+
+[node name="open" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0.54902 )
+margin_top = -2.0
+margin_right = 179.0
+margin_bottom = 46.0
+focus_mode = 0
+theme = ExtResource( 2 )
+text = "Menu"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+margin_left = 16.0
+margin_top = -31.0
+margin_right = 56.0
+margin_bottom = 9.0
+
+[node name="Sprite" type="Sprite" parent="Options"]
+position = Vector2( 93.5, 199 )
+scale = Vector2( 6.84375, 10.5 )
+texture = ExtResource( 3 )
+
+[node name="settings" type="Button" parent="Options"]
+margin_left = -11.0
+margin_top = 49.0
+margin_right = 119.0
+margin_bottom = 81.0
+rect_scale = Vector2( 1.6, 1.6 )
+focus_mode = 0
+theme = ExtResource( 2 )
+text = "Settings"
+flat = true
+
+[node name="quit" type="Button" parent="Options"]
+margin_left = 3.0
+margin_top = 164.0
+margin_right = 96.0
+margin_bottom = 196.0
+rect_scale = Vector2( 2, 1.6 )
+focus_mode = 0
+theme = ExtResource( 2 )
+text = "Quit"
+flat = true
+
+[node name="close" type="Button" parent="Options"]
+margin_left = 2.0
+margin_top = 294.0
+margin_right = 94.0
+margin_bottom = 326.0
+rect_scale = Vector2( 2, 1.4 )
+focus_mode = 0
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 0.815686, 0.666667, 0.384314, 1 )
+text = "Close"
+flat = true
+
+[node name="settingsmenu" type="Control" parent="Options"]
+visible = false
+
+[node name="Brightness" type="HSlider" parent="Options/settingsmenu"]
+margin_left = 3.0
+margin_top = 184.0
+margin_right = 191.0
+margin_bottom = 200.0
+rect_scale = Vector2( 1, 2 )
+focus_mode = 0
+min_value = 0.2
+max_value = 2.0
+step = 0.1
+value = 1.0
+tick_count = 19
+ticks_on_borders = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="title" type="Label" parent="Options/settingsmenu/Brightness"]
+margin_left = -1.0
+margin_top = -17.0
+margin_right = 233.0
+margin_bottom = 7.0
+rect_scale = Vector2( 0.8, 0.4 )
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.701961, 0, 1 )
+text = "Brightness"
+align = 1
+
+[node name="amount" type="Label" parent="Options/settingsmenu/Brightness"]
+margin_left = -3.0
+margin_top = 13.0
+margin_right = 237.0
+margin_bottom = 46.0
+rect_scale = Vector2( 0.8, 0.4 )
+theme = ExtResource( 2 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Volume" type="HSlider" parent="Options/settingsmenu"]
+margin_left = 3.0
+margin_top = 87.0
+margin_right = 191.0
+margin_bottom = 103.0
+rect_scale = Vector2( 1, 2 )
+focus_mode = 0
+min_value = -24.0
+max_value = 12.0
+tick_count = 37
+ticks_on_borders = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="title" type="Label" parent="Options/settingsmenu/Volume"]
+margin_left = -1.0
+margin_top = -16.0
+margin_right = 233.0
+margin_bottom = 21.0
+rect_scale = Vector2( 0.8, 0.4 )
+theme = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.0980392, 0.0980392, 1 )
+text = "Volume"
+align = 1
+
+[node name="amount" type="Label" parent="Options/settingsmenu/Volume"]
+margin_left = -7.0
+margin_top = 10.0
+margin_right = 238.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.8, 0.4 )
+theme = ExtResource( 2 )
+text = "0 "
+align = 1
+valign = 1
+
+[node name="quitmenu" type="Control" parent="Options"]
+visible = false
+
+[node name="reset" type="Button" parent="Options/quitmenu"]
+margin_left = -1.0
+margin_top = 65.0
+margin_right = 192.0
+margin_bottom = 103.0
+rect_scale = Vector2( 1, 1.3 )
+theme = ExtResource( 2 )
+text = "Game Menu"
+flat = true
+
+[node name="menu" type="Button" parent="Options/quitmenu"]
+margin_left = -8.0
+margin_top = 138.0
+margin_right = 198.0
+margin_bottom = 176.0
+rect_scale = Vector2( 1, 1.3 )
+theme = ExtResource( 2 )
+text = "Main Menu"
+flat = true
+
+[node name="exit" type="Button" parent="Options/quitmenu"]
+margin_left = 13.0
+margin_top = 222.0
+margin_right = 176.0
+margin_bottom = 260.0
+rect_scale = Vector2( 1, 1.3 )
+theme = ExtResource( 2 )
+text = "Exit Game"
+flat = true
+
+[connection signal="pressed" from="open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="Options/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Options/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/close" to="." method="_on_close_pressed"]
+[connection signal="value_changed" from="Options/settingsmenu/Brightness" to="." method="_on_Brightness_value_changed"]
+[connection signal="value_changed" from="Options/settingsmenu/Volume" to="." method="_on_Volume_value_changed"]
+[connection signal="pressed" from="Options/quitmenu/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Options/quitmenu/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Options/quitmenu/exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pilotcave.ogg-95e984f8e5bfb39a6460d15ef25a5b68.oggstr"
+
+[deps]
+
+source_file="res://asset/sounds/pilotcave.ogg"
+dest_files=[ "res://.import/pilotcave.ogg-95e984f8e5bfb39a6460d15ef25a5b68.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

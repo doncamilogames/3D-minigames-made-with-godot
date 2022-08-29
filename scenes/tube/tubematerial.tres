@@ -1,0 +1,8 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://assets/Mesh/tube/tube1/_.png" type="Texture" id=1]
+
+[resource]
+resource_name = "_"
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0

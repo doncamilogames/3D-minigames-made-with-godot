@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hatcop.obj-e3be599964d885e2bee9dbca07b7c42a.mesh"
+
+[deps]
+
+files=[ "res://.import/hatcop.obj-e3be599964d885e2bee9dbca07b7c42a.mesh" ]
+
+source_file="res://asset/mesh/gta/hatcop.obj"
+dest_files=[ "res://.import/hatcop.obj-e3be599964d885e2bee9dbca07b7c42a.mesh", "res://.import/hatcop.obj-e3be599964d885e2bee9dbca07b7c42a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

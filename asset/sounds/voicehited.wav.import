@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/voicehited.wav-45b6e25c41441b4f062669ba492089d4.sample"
+
+[deps]
+
+source_file="res://asset/sounds/voicehited.wav"
+dest_files=[ "res://.import/voicehited.wav-45b6e25c41441b4f062669ba492089d4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

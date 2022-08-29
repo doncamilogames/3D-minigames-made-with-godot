@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/forest1.obj-81aeba4c5bca7c18d24cce7e1237578e.mesh"
+
+[deps]
+
+files=[ "res://.import/forest1.obj-81aeba4c5bca7c18d24cce7e1237578e.mesh" ]
+
+source_file="res://asset/mesh/mot/forest1.obj"
+dest_files=[ "res://.import/forest1.obj-81aeba4c5bca7c18d24cce7e1237578e.mesh", "res://.import/forest1.obj-81aeba4c5bca7c18d24cce7e1237578e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

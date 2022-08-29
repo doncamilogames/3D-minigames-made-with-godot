@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/kinematic/tile/fire1.tres" type="Material" id=1]
+[ext_resource path="res://scenes/monsteroftime/fireball.gd" type="Script" id=2]
+[ext_resource path="res://asset/sounds/fireball1.wav" type="AudioStream" id=3]
+
+[sub_resource type="SphereMesh" id=1]
+resource_local_to_scene = true
+material = ExtResource( 1 )
+radius = 0.1
+height = 0.2
+radial_segments = 4
+rings = 1
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.105957
+
+[sub_resource type="Animation" id=3]
+resource_name = "explode"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("MeshInstance:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1, 1, 1 ), Vector3( 5, 5, 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MeshInstance:mesh:material:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_explode"
+} ]
+}
+
+[node name="fireball" type="RigidBody"]
+collision_layer = 7
+collision_mask = 7
+gravity_scale = 0.0
+contacts_reported = 2
+contact_monitor = true
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+cast_shadow = 0
+mesh = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+visible = false
+light_color = Color( 1, 0, 0, 1 )
+light_energy = 2.0
+light_indirect_energy = 0.0
+omni_range = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 3.0
+anims/explode = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -24.0
+pitch_scale = 2.0
+
+[connection signal="body_entered" from="." to="." method="_on_fireball_body_entered"]

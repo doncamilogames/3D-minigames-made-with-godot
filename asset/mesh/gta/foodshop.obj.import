@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/foodshop.obj-3d0e4da6ab9d658b644e1c700dcd7897.mesh"
+
+[deps]
+
+files=[ "res://.import/foodshop.obj-3d0e4da6ab9d658b644e1c700dcd7897.mesh" ]
+
+source_file="res://asset/mesh/gta/foodshop.obj"
+dest_files=[ "res://.import/foodshop.obj-3d0e4da6ab9d658b644e1c700dcd7897.mesh", "res://.import/foodshop.obj-3d0e4da6ab9d658b644e1c700dcd7897.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

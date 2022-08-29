@@ -1,0 +1,22 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _132
+Ka 0.000000 0.000000 0.000000
+Kd 0.254902 0.074510 0.176471
+Ks 0.330000 0.330000 0.330000
+map_Kd mushroomenemy/_132.png
+
+newmtl earthforest
+Ka 0.000000 0.000000 0.000000
+Kd 0.094118 0.078431 0.023529
+Ks 0.330000 0.330000 0.330000
+map_Kd mushroomenemy/earthforest.png
+
+newmtl _20
+Ka 0.000000 0.000000 0.000000
+Kd 0.156863 0.188235 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd mushroomenemy/_20.png
+

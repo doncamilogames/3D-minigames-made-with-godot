@@ -1,0 +1,9 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://asset/textures/32text/templeroof.png" type="Texture" id=1]
+
+[resource]
+resource_name = "_112"
+albedo_color = Color( 0.756863, 0.972549, 1, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0

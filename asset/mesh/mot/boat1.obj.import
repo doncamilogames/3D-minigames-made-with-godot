@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/boat1.obj-c42de36f19751e5fc4fe5f4df3cf3a1b.mesh"
+
+[deps]
+
+files=[ "res://.import/boat1.obj-c42de36f19751e5fc4fe5f4df3cf3a1b.mesh" ]
+
+source_file="res://asset/mesh/mot/boat1.obj"
+dest_files=[ "res://.import/boat1.obj-c42de36f19751e5fc4fe5f4df3cf3a1b.mesh", "res://.import/boat1.obj-c42de36f19751e5fc4fe5f4df3cf3a1b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

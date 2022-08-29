@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/evier1.obj-19aea228bd4723dbca412f4d3516481b.mesh"
+
+[deps]
+
+files=[ "res://.import/evier1.obj-19aea228bd4723dbca412f4d3516481b.mesh" ]
+
+source_file="res://asset/mesh/gta/props/evier1.obj"
+dest_files=[ "res://.import/evier1.obj-19aea228bd4723dbca412f4d3516481b.mesh", "res://.import/evier1.obj-19aea228bd4723dbca412f4d3516481b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

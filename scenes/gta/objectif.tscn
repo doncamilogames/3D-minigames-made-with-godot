@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://asset/textures/32text/32fire.png" type="Texture" id=1]
+[ext_resource path="res://scenes/gta/objectif.gd" type="Script" id=2]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 2.0
+bottom_radius = 2.0
+height = 10.0
+radial_segments = 6
+rings = 2
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0.345098 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0
+uv1_offset = Vector3( 0.654326, 0.654326, 0.654326 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+data = PoolVector3Array( 0, 5, 2, 1.7321, 5, 1, 0, 1.6667, 2, 1.7321, 5, 1, 1.7321, 1.6667, 1, 0, 1.6667, 2, 1.7321, 5, 1, 1.7321, 5, -1, 1.7321, 1.6667, 1, 1.7321, 5, -1, 1.7321, 1.6667, -1, 1.7321, 1.6667, 1, 1.7321, 5, -1, 0, 5, -2, 1.7321, 1.6667, -1, 0, 5, -2, 0, 1.6667, -2, 1.7321, 1.6667, -1, 0, 5, -2, -1.7321, 5, -1, 0, 1.6667, -2, -1.7321, 5, -1, -1.7321, 1.6667, -1, 0, 1.6667, -2, -1.7321, 5, -1, -1.7321, 5, 1, -1.7321, 1.6667, -1, -1.7321, 5, 1, -1.7321, 1.6667, 1, -1.7321, 1.6667, -1, -1.7321, 5, 1, 0, 5, 2, -1.7321, 1.6667, 1, 0, 5, 2, 0, 1.6667, 2, -1.7321, 1.6667, 1, 0, 1.6667, 2, 1.7321, 1.6667, 1, 0, -1.6667, 2, 1.7321, 1.6667, 1, 1.7321, -1.6667, 1, 0, -1.6667, 2, 1.7321, 1.6667, 1, 1.7321, 1.6667, -1, 1.7321, -1.6667, 1, 1.7321, 1.6667, -1, 1.7321, -1.6667, -1, 1.7321, -1.6667, 1, 1.7321, 1.6667, -1, 0, 1.6667, -2, 1.7321, -1.6667, -1, 0, 1.6667, -2, 0, -1.6667, -2, 1.7321, -1.6667, -1, 0, 1.6667, -2, -1.7321, 1.6667, -1, 0, -1.6667, -2, -1.7321, 1.6667, -1, -1.7321, -1.6667, -1, 0, -1.6667, -2, -1.7321, 1.6667, -1, -1.7321, 1.6667, 1, -1.7321, -1.6667, -1, -1.7321, 1.6667, 1, -1.7321, -1.6667, 1, -1.7321, -1.6667, -1, -1.7321, 1.6667, 1, 0, 1.6667, 2, -1.7321, -1.6667, 1, 0, 1.6667, 2, 0, -1.6667, 2, -1.7321, -1.6667, 1, 0, -1.6667, 2, 1.7321, -1.6667, 1, 0, -5, 2, 1.7321, -1.6667, 1, 1.7321, -5, 1, 0, -5, 2, 1.7321, -1.6667, 1, 1.7321, -1.6667, -1, 1.7321, -5, 1, 1.7321, -1.6667, -1, 1.7321, -5, -1, 1.7321, -5, 1, 1.7321, -1.6667, -1, 0, -1.6667, -2, 1.7321, -5, -1, 0, -1.6667, -2, 0, -5, -2, 1.7321, -5, -1, 0, -1.6667, -2, -1.7321, -1.6667, -1, 0, -5, -2, -1.7321, -1.6667, -1, -1.7321, -5, -1, 0, -5, -2, -1.7321, -1.6667, -1, -1.7321, -1.6667, 1, -1.7321, -5, -1, -1.7321, -1.6667, 1, -1.7321, -5, 1, -1.7321, -5, -1, -1.7321, -1.6667, 1, 0, -1.6667, 2, -1.7321, -5, 1, 0, -1.6667, 2, 0, -5, 2, -1.7321, -5, 1, 0, 5, 0, 1.7321, 5, 1, 0, 5, 2, 0, 5, 0, 1.7321, 5, -1, 1.7321, 5, 1, 0, 5, 0, 0, 5, -2, 1.7321, 5, -1, 0, 5, 0, -1.7321, 5, -1, 0, 5, -2, 0, 5, 0, -1.7321, 5, 1, -1.7321, 5, -1, 0, 5, 0, 0, 5, 2, -1.7321, 5, 1, 0, -5, 0, 0, -5, 2, 1.7321, -5, 1, 0, -5, 0, 1.7321, -5, 1, 1.7321, -5, -1, 0, -5, 0, 1.7321, -5, -1, 0, -5, -2, 0, -5, 0, 0, -5, -2, -1.7321, -5, -1, 0, -5, 0, -1.7321, -5, -1, -1.7321, -5, 1, 0, -5, 0, -1.7321, -5, 1, 0, -5, 2 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "New Anim"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MeshInstance:material/0:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 1, 1, 1 ) ]
+}
+
+[node name="objectif" type="Area"]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 4 )
+
+[connection signal="body_entered" from="." to="." method="_on_objectif_body_entered"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://asset/textures/32text/32door2.png" type="Texture" id=1]
+[ext_resource path="res://scenes/monsteroftime/door.gd" type="Script" id=2]
+[ext_resource path="res://asset/textures/32text/32keyhole.png" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=26]
+albedo_color = Color( 0.768627, 0.815686, 0.74902, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0
+uv1_scale = Vector3( 3, 2, 3 )
+
+[sub_resource type="CubeMesh" id=25]
+material = SubResource( 26 )
+size = Vector3( 2.3, 4.8, 0.3 )
+
+[sub_resource type="CylinderShape" id=23]
+radius = 1.60933
+height = 3.59728
+
+[sub_resource type="ConvexPolygonShape" id=24]
+points = PoolVector3Array( -1.1, -2.4, -0.15, -1.1, -2.4, 0.15, -1.1, 2.4, -0.15, 1.1, -2.4, -0.15, 1.1, -2.4, 0.15, -1.1, 2.4, 0.15, 1.1, 2.4, -0.15, 1.1, 2.4, 0.15 )
+
+[sub_resource type="SpatialMaterial" id=27]
+albedo_texture = ExtResource( 3 )
+metallic_specular = 0.0
+uv1_scale = Vector3( 2, 2, 2 )
+uv1_offset = Vector3( 0.5, 0, 1 )
+
+[sub_resource type="CubeMesh" id=28]
+material = SubResource( 27 )
+size = Vector3( 0.304, 1.072, 0.577 )
+
+[node name="door" type="Area"]
+transform = Transform( 0.872803, 0, 0.488073, 0, 1, 0, -0.488073, 0, 0.872803, 2.28833, 13.328, 80.1874 )
+monitorable = false
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 25 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 23 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.8, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 24 )
+
+[node name="keyhole" type="MeshInstance" parent="."]
+transform = Transform( 8.9407e-08, 0, -1, 0, 1, 0, 1, 0, 8.9407e-08, 0.752842, 0.0110846, 0.0267792 )
+visible = false
+mesh = SubResource( 28 )
+material/0 = null
+
+[connection signal="body_entered" from="." to="." method="_on_door_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_door_body_exited"]

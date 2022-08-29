@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/ghouse1.obj-cffa3abd45b3df75f4ff765bd2bcac20.mesh"
+
+[deps]
+
+files=[ "res://.import/ghouse1.obj-cffa3abd45b3df75f4ff765bd2bcac20.mesh" ]
+
+source_file="res://asset/mesh/gta/ghouse1.obj"
+dest_files=[ "res://.import/ghouse1.obj-cffa3abd45b3df75f4ff765bd2bcac20.mesh", "res://.import/ghouse1.obj-cffa3abd45b3df75f4ff765bd2bcac20.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

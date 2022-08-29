@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/foresttemple.ogg-e15af4b7957d29e05f7582798d1d8742.oggstr"
+
+[deps]
+
+source_file="res://asset/sounds/foresttemple.ogg"
+dest_files=[ "res://.import/foresttemple.ogg-e15af4b7957d29e05f7582798d1d8742.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

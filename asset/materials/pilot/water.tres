@@ -1,0 +1,10 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://asset/textures/32text/waterbright.png" type="Texture" id=1]
+
+[resource]
+resource_name = "_75"
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0.619608 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0

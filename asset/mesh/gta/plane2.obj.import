@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/plane2.obj-a1ff5127e639e0d18ca4e27a0c718b56.mesh"
+
+[deps]
+
+files=[ "res://.import/plane2.obj-a1ff5127e639e0d18ca4e27a0c718b56.mesh" ]
+
+source_file="res://asset/mesh/gta/plane2.obj"
+dest_files=[ "res://.import/plane2.obj-a1ff5127e639e0d18ca4e27a0c718b56.mesh", "res://.import/plane2.obj-a1ff5127e639e0d18ca4e27a0c718b56.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

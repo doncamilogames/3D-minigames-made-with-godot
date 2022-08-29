@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/sandslope2.obj-ae976c2d236ad827550e3899e86c234d.mesh"
+
+[deps]
+
+files=[ "res://.import/sandslope2.obj-ae976c2d236ad827550e3899e86c234d.mesh" ]
+
+source_file="res://asset/mesh/tilemap/sandslope2.obj"
+dest_files=[ "res://.import/sandslope2.obj-ae976c2d236ad827550e3899e86c234d.mesh", "res://.import/sandslope2.obj-ae976c2d236ad827550e3899e86c234d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

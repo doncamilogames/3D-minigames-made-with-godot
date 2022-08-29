@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/trot1.obj-c577fed7f3d4a4f4e0543afd681a940c.mesh"
+
+[deps]
+
+files=[ "res://.import/trot1.obj-c577fed7f3d4a4f4e0543afd681a940c.mesh" ]
+
+source_file="res://asset/mesh/tilemap/trot1.obj"
+dest_files=[ "res://.import/trot1.obj-c577fed7f3d4a4f4e0543afd681a940c.mesh", "res://.import/trot1.obj-c577fed7f3d4a4f4e0543afd681a940c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

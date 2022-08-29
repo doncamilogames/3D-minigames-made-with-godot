@@ -1,0 +1,28 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _17
+Ka 0.000000 0.000000 0.000000
+Kd 0.054902 0.094118 0.043137
+Ks 0.330000 0.330000 0.330000
+map_Kd plantennemy/_17.png
+
+newmtl leaf1
+Ka 0.000000 0.000000 0.000000
+Kd 0.054902 0.094118 0.043137
+Ks 0.330000 0.330000 0.330000
+map_Kd plantennemy/leaf1.png
+
+newmtl _266
+Ka 0.000000 0.000000 0.000000
+Kd 0.101961 0.090196 0.294118
+Ks 0.330000 0.330000 0.330000
+map_Kd plantennemy/_266.png
+
+newmtl _
+Ka 0.000000 0.000000 0.000000
+Kd 0.572549 0.243137 0.411765
+Ks 0.330000 0.330000 0.330000
+map_Kd plantennemy/_.png
+

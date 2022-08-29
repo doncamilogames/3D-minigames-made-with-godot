@@ -1,0 +1,9 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://asset/textures/32text/32grass2BW.png" type="Texture" id=1]
+
+[resource]
+resource_name = "topblu"
+albedo_color = Color( 0.239216, 0.427451, 0.411765, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_specular = 0.0

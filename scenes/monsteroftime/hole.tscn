@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/monsteroftime/hole.gd" type="Script" id=1]
+
+[node name="hole" type="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155.18, -35.8678, 175.138 )
+collision_layer = 6
+collision_mask = 6
+monitorable = false
+script = ExtResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_hole_body_entered"]

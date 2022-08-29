@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/monsteroftime/paintennemymesh.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/monsteroftime/paintennemy.gd" type="Script" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.010794, 0.132242, 0.0762728 )
+
+[node name="paintennemy" type="StaticBody"]
+script = ExtResource( 2 )
+
+[node name="mesh" parent="." instance=ExtResource( 1 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00990072, 0.143665, 0 )
+shape = SubResource( 1 )
